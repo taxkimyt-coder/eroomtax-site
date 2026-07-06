@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>세무 정보 블로그 | 이룸세무회계</title>
+<meta property="og:title" content="세무 정보 블로그 | 이룸세무회계">
+<meta property="og:description" content="법인 절세, 병의원 세무, 청년창업, 양도·증여세 등 유용한 세무 정보.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://eroomtax.kr/blog.html">
+<meta property="og:image" content="https://eroomtax.kr/og-image.jpg">
+<meta name="robots" content="noindex,follow">
+<meta name="description" content="법인 절세, 병의원 세무, 청년창업, 양도·증여세 등 유용한 세무 정보.">
+<meta name="keywords" content="법인세무사,청년창업세무사,병의원세무사,개인사업자세무,이룸세무회계">
+<link rel="canonical" href="https://eroomtax.kr/blog.html">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.44.0/tabler-icons.min.css">
+<link rel="stylesheet" href="styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AccountingService",
+  "name": "이룸세무회계",
+  "alternateName": "Eroom Tax",
+  "url": "https://eroomtax.kr/blog.html",
+  "image": "https://eroomtax.kr/images/profile-kim.jpg",
+  "telephone": "+82-2-3462-3474",
+  "email": "taxkimyt@gmail.com",
+  "priceRange": "첫 상담 무료",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "도곡로 129, 401호 (남강빌딩)",
+    "addressLocality": "강남구",
+    "addressRegion": "서울특별시",
+    "addressCountry": "KR"
+  },
+  "founder": {
+    "@type": "Person",
+    "name": "김용태",
+    "jobTitle": "세무사"
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "서울특별시 강남구"
+  },
+  "sameAs": []
+}
+</script>
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+<link rel="apple-touch-icon" href="favicon-180.png">
+<!-- Google Analytics 4: 아래 G-0J1D7C7WG3를 실제 발급받은 측정 ID로 교체하세요 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0J1D7C7WG3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-0J1D7C7WG3');
+</script>
+<!-- 네이버 서치어드바이저 사이트 소유확인: 발급받은 코드로 content 값을 교체하세요 -->
+<meta name="naver-site-verification" content="2f60ec0e83733a129794c67e9b5554e11ee3fd20">
+</head>
+<body data-page="blog">
+<!-- NAV -->
+<nav id="main-nav">
+  <div class="logo" onclick="goPage('home')"><span>이룸</span>세무회계</div>
+  <div class="nav-links">
+    <a class="nl active" id="nav-home" onclick="goPage('home')">홈</a>
+    <div class="nav-dropdown nl" id="nav-services">
+      <a onclick="toggleDropdown(event)">세무서비스</a>
+      <div class="dropdown-menu">
+        <a onclick="goSvc('svc-jang')"><i class="ti ti-book" style="color:#1DB8A0;"></i>세무 기장</a>
+        <a onclick="goSvc('svc-tax')"><i class="ti ti-home" style="color:#B8900A;"></i>재산세제 신고</a>
+        <a onclick="goSvc('svc-con')"><i class="ti ti-chart-dots" style="color:#8B6BB1;"></i>컨설팅</a>
+      </div>
+    </div>
+    <a class="nl" id="nav-about" onclick="goPage('about')">회사소개</a>
+    <a class="nl" id="nav-contact" onclick="goPage('contact')">상담 신청</a>
+  </div>
+  <div class="nav-right">
+    <button class="nav-cta" onclick="window.open('http://pf.kakao.com/_GsQcj/chat','_blank')">무료 상담</button>
+    <button id="hamburger" onclick="toggleMenu()" aria-label="메뉴">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div id="mobile-menu">
+  <a onclick="goPage('home');toggleMenu()">홈</a>
+  <a onclick="toggleMobileSvc()" style="display:flex;align-items:center;justify-content:space-between;">
+    세무서비스 <span id="mobile-svc-arrow" style="font-size:18px;font-weight:700;transition:transform .2s;line-height:1;">▾</span>
+  </a>
+  <div id="mobile-svc-sub" style="display:none;background:var(--gray);border-radius:8px;margin:0 0 4px;">
+    <a onclick="goPage('svc-jang');toggleMenu()" style="padding-left:24px;border-bottom:1px solid var(--border);">세무 기장</a>
+    <a onclick="goPage('svc-tax');toggleMenu()" style="padding-left:24px;border-bottom:1px solid var(--border);">재산세제 신고</a>
+    <a onclick="goPage('svc-con');toggleMenu()" style="padding-left:24px;border-bottom:none;">컨설팅</a>
+  </div>
+  <a onclick="goPage('about');toggleMenu()">회사소개</a>
+  <a onclick="goPage('contact');toggleMenu()">상담 신청</a>
+</div>
+<div class="page active" id="page-blog">
+<div class="grad-bar"></div>
+<div class="section" style="padding-top:52px;">
+  <span class="sec-tag tag-t">이룸 블로그</span>
+  <h1 class="sec-title" style="font-size:28px;">세금에 대한 모든 것</h1>
+  <p class="sec-sub">법인·청년창업·병의원 세무 전문 세무사가 직접 씁니다.<br>실무에서 자주 나오는 세금 이슈를 쉽게 정리합니다.</p>
+
+  <div style="display:flex;align-items:center;justify-content:space-between;padding:14px 16px;background:var(--gray);border-radius:12px;margin-bottom:20px;flex-wrap:wrap;gap:10px;">
+    <div style="display:flex;align-items:center;gap:10px;">
+      <div style="width:32px;height:32px;background:#03C75A;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:14px;font-weight:700;">N</div>
+      <div>
+        <div style="font-size:14px;font-weight:600;">이룸세무회계 네이버 블로그</div>
+        <div style="font-size:12px;color:var(--text2);">이룸세무회계 | 강남 병의원 법인·청년창업 세무</div>
+      </div>
+    </div>
+    <button class="btn-gold" style="font-size:13px;padding:8px 16px;" onclick="window.open('https://blog.naver.com/eroom-tax','_blank')">블로그 방문하기 →</button>
+  </div>
+
+  <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px;">
+    <button class="blog-ftab active" onclick="blogFilter('all',this)">전체</button>
+    <button class="blog-ftab" onclick="blogFilter('corp',this)">법인</button>
+    <button class="blog-ftab" onclick="blogFilter('clinic2',this)">병의원</button>
+    <button class="blog-ftab" onclick="blogFilter('startup',this)">청년창업·스타트업</button>
+    <button class="blog-ftab" onclick="blogFilter('sole',this)">개인사업자</button>
+    <button class="blog-ftab" onclick="blogFilter('vat',this)">부가가치세</button>
+    <button class="blog-ftab" onclick="blogFilter('income',this)">종합소득세</button>
+    <button class="blog-ftab" onclick="blogFilter('transfer',this)">양도소득세</button>
+    <button class="blog-ftab" onclick="blogFilter('inherit',this)">상속·증여세</button>
+    <button class="blog-ftab" onclick="blogFilter('taxstory',this)">세금이야기</button>
+    <button class="blog-ftab" onclick="blogFilter('policy',this)">정책자금</button>
+    <button class="blog-ftab" onclick="blogFilter('clinic',this)">병의원</button>
+    <button class="blog-ftab" onclick="blogFilter('income',this)">개인·종소세</button>
+    <button class="blog-ftab" onclick="blogFilter('vat',this)">부가세</button>
+    <button class="blog-ftab" onclick="blogFilter('tax',this)">절세·세금상식</button>
+  </div>
+
+  <div class="svc-grid" id="blog-cards">
+    <div class="blog-card" data-cat="tax" onclick="window.open('https://blog.naver.com/eroom-tax/222472700681','_blank')">
+      <div class="blog-thumb" style="background:linear-gradient(135deg,#E0F7F4,#b3ede3);">📖</div>
+      <div class="blog-body">
+        <div style="display:flex;gap:6px;margin-bottom:8px;"><span class="svc-badge tag-t">절세·세금상식</span><span style="font-size:10px;background:#FFF0F0;color:#c41a1a;padding:2px 7px;border-radius:20px;font-weight:600;">NEW</span></div>
+        <div class="blog-title">세무의 기본</div>
+        <div class="blog-desc">세무의 기본 개념과 사업자라면 꼭 알아야 할 핵심 내용을 정리했습니다.</div>
+      </div>
+      <div class="blog-footer"><span class="blog-date">2021.08.16</span><span style="font-size:12px;font-weight:600;color:var(--teal);">읽어보기 →</span></div>
+    </div>
+    <div class="blog-card" data-cat="corp" onclick="window.open('https://blog.naver.com/eroom-tax','_blank')">
+      <div class="blog-thumb" style="background:linear-gradient(135deg,#E0F7F4,#b3ede3);">📋</div>
+      <div class="blog-body">
+        <div style="margin-bottom:8px;"><span class="svc-badge tag-t">법인·청년창업</span></div>
+        <div class="blog-title">강남 법인 대표라면 꼭 알아야 할 법인세 신고 핵심 정리</div>
+        <div class="blog-desc">12월 결산 법인의 법인세 신고 기한은 4월 30일입니다. 결산 전 체크리스트까지 한번에 정리했습니다.</div>
+      </div>
+      <div class="blog-footer"><span class="blog-date">2025.06.01</span><span style="font-size:12px;font-weight:600;color:var(--teal);">읽어보기 →</span></div>
+    </div>
+    <div class="blog-card" data-cat="income" onclick="window.open('https://blog.naver.com/eroom-tax','_blank')">
+      <div class="blog-thumb" style="background:linear-gradient(135deg,#F0EBF8,#d9c8f0);">💡</div>
+      <div class="blog-body">
+        <div style="margin-bottom:8px;"><span class="svc-badge tag-p">개인·종소세</span></div>
+        <div class="blog-title">프리랜서 종합소득세, 이것만 챙겨도 수십만 원 환급받는다</div>
+        <div class="blog-desc">3.3% 원천징수 후 신고 안 하면 손해입니다. 노란우산공제, 연금저축 절세 방법까지 정리했습니다.</div>
+      </div>
+      <div class="blog-footer"><span class="blog-date">2025.05.10</span><span style="font-size:12px;font-weight:600;color:var(--teal);">읽어보기 →</span></div>
+    </div>
+    <div class="blog-card" data-cat="clinic" onclick="window.open('https://blog.naver.com/eroom-tax','_blank')">
+      <div class="blog-thumb" style="background:linear-gradient(135deg,#FFF8E0,#faeab3);">🏥</div>
+      <div class="blog-body">
+        <div style="margin-bottom:8px;"><span class="svc-badge tag-g">병의원</span></div>
+        <div class="blog-title">병의원 개원 전 세무 세팅 — 놓치면 매년 수백만 원씩 손해</div>
+        <div class="blog-desc">면세·과세 겸업 구조, 인건비 최적화, 성실신고 대비까지 정리했습니다.</div>
+      </div>
+      <div class="blog-footer"><span class="blog-date">2025.04.20</span><span style="font-size:12px;font-weight:600;color:var(--teal);">읽어보기 →</span></div>
+    </div>
+    <div class="blog-card" data-cat="vat" onclick="window.open('https://blog.naver.com/eroom-tax','_blank')">
+      <div class="blog-thumb" style="background:linear-gradient(135deg,#E8F4FF,#b3d4f5);">📊</div>
+      <div class="blog-body">
+        <div style="margin-bottom:8px;"><span class="svc-badge tag-t">부가세</span></div>
+        <div class="blog-title">부가세 신고 전 반드시 확인할 매입세액 공제 항목 총정리</div>
+        <div class="blog-desc">놓치는 매입세액 공제 항목 때문에 환급을 못 받는 경우가 많습니다.</div>
+      </div>
+      <div class="blog-footer"><span class="blog-date">2025.04.05</span><span style="font-size:12px;font-weight:600;color:var(--teal);">읽어보기 →</span></div>
+    </div>
+    <div class="blog-card" data-cat="tax" onclick="window.open('https://blog.naver.com/eroom-tax','_blank')">
+      <div class="blog-thumb" style="background:linear-gradient(135deg,#FFF0F0,#fcc);">⚖️</div>
+      <div class="blog-body">
+        <div style="margin-bottom:8px;"><span class="svc-badge tag-r">절세·세금상식</span></div>
+        <div class="blog-title">이미 낸 세금도 5년 안에 돌려받을 수 있다 — 경정청구 완전 정복</div>
+        <div class="blog-desc">잘못 신고한 세금, 누락된 공제 항목이 있다면 경정청구로 환급받을 수 있습니다.</div>
+      </div>
+      <div class="blog-footer"><span class="blog-date">2025.03.05</span><span style="font-size:12px;font-weight:600;color:var(--teal);">읽어보기 →</span></div>
+    </div>
+  </div>
+
+  <div style="background:var(--gray);border:1.5px dashed var(--border);border-radius:12px;padding:20px;text-align:center;margin-top:16px;">
+    <p style="font-size:14px;margin-bottom:6px;">✏️</p>
+    <p style="font-size:13px;color:var(--text2);">새 블로그 글을 작성하셨나요?<br><strong style="color:var(--text);">글 URL + 제목 + 날짜</strong>를 알려주시면 카드로 바로 추가해드립니다.</p>
+  </div>
+</div>
+<footer>
+  <div><div class="ft-logo"><span>이룸</span>세무회계</div><div class="ft-slogan">세금에 대한 모든 것, 이룸세무회계</div><div class="ft-info">서울 강남구 도곡로 129, 401호 · T 02-3462-3474 · taxkimyt@gmail.com</div><div class="ft-reg">사업자등록번호: 116-08-17476 · <a href="privacy-policy.html">개인정보처리방침</a></div></div>
+  <div class="ft-links"><a onclick="goPage('home')">홈</a><a onclick="goPage('services')">서비스</a><a onclick="goPage('about')">회사소개</a><a onclick="goPage('contact')">상담 신청</a></div>
+</footer>
+<script src="script.js"></script>
+<a href="http://pf.kakao.com/_GsQcj/chat" target="_blank" class="floating-kakao" aria-label="카카오톡 상담하기">
+  <i class="ti ti-brand-kakao-talk"></i>
+  <span class="floating-kakao-label">카톡 상담</span>
+</a>
+</body>
+</html>

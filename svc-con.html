@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>경정청구·이의신청·조세불복 | 이룸세무회계</title>
+<meta property="og:title" content="경정청구·이의신청·조세불복 | 이룸세무회계">
+<meta property="og:description" content="세무조사 대응, 경정청구, 이의신청, 조세불복까지 전문적으로 대응합니다.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://eroomtax.kr/svc-con.html">
+<meta property="og:image" content="https://eroomtax.kr/og-image.jpg">
+<meta name="description" content="세무조사 대응, 경정청구, 이의신청, 조세불복까지 전문적으로 대응합니다.">
+<meta name="keywords" content="법인세무사,청년창업세무사,병의원세무사,개인사업자세무,이룸세무회계">
+<link rel="canonical" href="https://eroomtax.kr/svc-con.html">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.44.0/tabler-icons.min.css">
+<link rel="stylesheet" href="styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AccountingService",
+  "name": "이룸세무회계",
+  "alternateName": "Eroom Tax",
+  "url": "https://eroomtax.kr/svc-con.html",
+  "image": "https://eroomtax.kr/images/profile-kim.jpg",
+  "telephone": "+82-2-3462-3474",
+  "email": "taxkimyt@gmail.com",
+  "priceRange": "첫 상담 무료",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "도곡로 129, 401호 (남강빌딩)",
+    "addressLocality": "강남구",
+    "addressRegion": "서울특별시",
+    "addressCountry": "KR"
+  },
+  "founder": {
+    "@type": "Person",
+    "name": "김용태",
+    "jobTitle": "세무사"
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "서울특별시 강남구"
+  },
+  "sameAs": []
+}
+</script>
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+<link rel="apple-touch-icon" href="favicon-180.png">
+<!-- Google Analytics 4: 아래 G-0J1D7C7WG3를 실제 발급받은 측정 ID로 교체하세요 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0J1D7C7WG3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-0J1D7C7WG3');
+</script>
+<!-- 네이버 서치어드바이저 사이트 소유확인: 발급받은 코드로 content 값을 교체하세요 -->
+<meta name="naver-site-verification" content="2f60ec0e83733a129794c67e9b5554e11ee3fd20">
+</head>
+<body data-page="svc-con">
+<!-- NAV -->
+<nav id="main-nav">
+  <div class="logo" onclick="goPage('home')"><span>이룸</span>세무회계</div>
+  <div class="nav-links">
+    <a class="nl active" id="nav-home" onclick="goPage('home')">홈</a>
+    <div class="nav-dropdown nl" id="nav-services">
+      <a onclick="toggleDropdown(event)">세무서비스</a>
+      <div class="dropdown-menu">
+        <a onclick="goSvc('svc-jang')"><i class="ti ti-book" style="color:#1DB8A0;"></i>세무 기장</a>
+        <a onclick="goSvc('svc-tax')"><i class="ti ti-home" style="color:#B8900A;"></i>재산세제 신고</a>
+        <a onclick="goSvc('svc-con')"><i class="ti ti-chart-dots" style="color:#8B6BB1;"></i>컨설팅</a>
+      </div>
+    </div>
+    <a class="nl" id="nav-about" onclick="goPage('about')">회사소개</a>
+    <a class="nl" id="nav-contact" onclick="goPage('contact')">상담 신청</a>
+  </div>
+  <div class="nav-right">
+    <button class="nav-cta" onclick="window.open('http://pf.kakao.com/_GsQcj/chat','_blank')">무료 상담</button>
+    <button id="hamburger" onclick="toggleMenu()" aria-label="메뉴">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div id="mobile-menu">
+  <a onclick="goPage('home');toggleMenu()">홈</a>
+  <a onclick="toggleMobileSvc()" style="display:flex;align-items:center;justify-content:space-between;">
+    세무서비스 <span id="mobile-svc-arrow" style="font-size:18px;font-weight:700;transition:transform .2s;line-height:1;">▾</span>
+  </a>
+  <div id="mobile-svc-sub" style="display:none;background:var(--gray);border-radius:8px;margin:0 0 4px;">
+    <a onclick="goPage('svc-jang');toggleMenu()" style="padding-left:24px;border-bottom:1px solid var(--border);">세무 기장</a>
+    <a onclick="goPage('svc-tax');toggleMenu()" style="padding-left:24px;border-bottom:1px solid var(--border);">재산세제 신고</a>
+    <a onclick="goPage('svc-con');toggleMenu()" style="padding-left:24px;border-bottom:none;">컨설팅</a>
+  </div>
+  <a onclick="goPage('about');toggleMenu()">회사소개</a>
+  <a onclick="goPage('contact');toggleMenu()">상담 신청</a>
+</div>
+<div class="page active" id="page-svc-con">
+<div class="grad-bar"></div>
+<div class="section" style="padding-top:52px;max-width:900px;margin:0 auto;">
+  <span class="sec-tag tag-p">컨설팅</span>
+  <h1 class="sec-title" style="font-size:28px;">잘못 부과된 세금<br>억울하게 낸 세금을 되찾아드립니다</h1>
+  <p class="sec-sub">경정청구·이의신청·조세불복까지, 납세자의 권리를 끝까지 지킵니다.</p>
+
+  <!-- 경정청구 -->
+  <div data-highlight="purple" style="border:2px solid #e8e8e8;border-radius:14px;padding:28px;margin-bottom:24px;transition:border-color .7s ease,box-shadow .7s ease;">
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
+      <div style="width:36px;height:36px;border-radius:10px;background:var(--purple-bg);display:flex;align-items:center;justify-content:center;font-size:18px;">💰</div>
+      <h3 style="font-size:18px;font-weight:800;">경정청구</h3>
+    </div>
+    <p style="font-size:14px;color:var(--text2);line-height:1.7;margin-bottom:20px;">5년 이내 과다 납부한 세금은 경정청구로 돌려받을 수 있습니다. 먼저 무료 검토를 받아보세요.</p>
+    <div style="display:flex;gap:0;margin-bottom:20px;overflow-x:auto;">
+      <div style="flex:1;min-width:80px;text-align:center;padding:12px 4px;position:relative;"><div style="width:36px;height:36px;border-radius:50%;background:var(--purple-bg);color:var(--purple-text);font-size:13px;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 8px;min-width:36px;flex-shrink:0;">1</div><div style="font-size:11px;font-weight:700;">무료 검토</div><div style="font-size:10px;color:var(--text2);line-height:1.4;">과거 신고 분석</div><div style="position:absolute;right:-4px;top:22px;color:#ccc;font-size:18px;">›</div></div>
+      <div style="flex:1;min-width:80px;text-align:center;padding:12px 4px;position:relative;"><div style="width:36px;height:36px;border-radius:50%;background:var(--purple-bg);color:var(--purple-text);font-size:13px;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 8px;min-width:36px;flex-shrink:0;">2</div><div style="font-size:11px;font-weight:700;">환급 산출</div><div style="font-size:10px;color:var(--text2);line-height:1.4;">예상 금액 확인</div><div style="position:absolute;right:-4px;top:22px;color:#ccc;font-size:18px;">›</div></div>
+      <div style="flex:1;min-width:80px;text-align:center;padding:12px 4px;position:relative;"><div style="width:36px;height:36px;border-radius:50%;background:var(--purple-bg);color:var(--purple-text);font-size:13px;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 8px;min-width:36px;flex-shrink:0;">3</div><div style="font-size:11px;font-weight:700;">청구서 제출</div><div style="font-size:10px;color:var(--text2);line-height:1.4;">5년 이내 가능</div><div style="position:absolute;right:-4px;top:22px;color:#ccc;font-size:18px;">›</div></div>
+      <div style="flex:1;min-width:80px;text-align:center;padding:12px 4px;"><div style="width:36px;height:36px;border-radius:50%;background:var(--purple-bg);color:var(--purple-text);font-size:13px;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 8px;min-width:36px;flex-shrink:0;">4</div><div style="font-size:11px;font-weight:700;">환급 완료</div><div style="font-size:10px;color:var(--text2);line-height:1.4;">가산금 포함</div></div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:16px;">
+      <div style="background:var(--gray);border-radius:10px;padding:14px;"><span style="background:var(--purple-bg);color:var(--purple-text);font-size:10px;padding:2px 8px;border-radius:20px;font-weight:600;">종합소득세</span><div style="font-size:16px;font-weight:800;color:var(--purple);margin:6px 0 3px;">380만원 환급</div><p style="font-size:11px;color:var(--text2);line-height:1.4;">3년 전 누락 공제 발견, 경정청구 성공</p></div>
+      <div style="background:var(--gray);border-radius:10px;padding:14px;"><span style="background:var(--purple-bg);color:var(--purple-text);font-size:10px;padding:2px 8px;border-radius:20px;font-weight:600;">부가세</span><div style="font-size:16px;font-weight:800;color:var(--purple);margin:6px 0 3px;">220만원 환급</div><p style="font-size:11px;color:var(--text2);line-height:1.4;">매입세액 누락 5건, 3개월 내 환급</p></div>
+      <div style="background:var(--gray);border-radius:10px;padding:14px;"><span style="background:var(--purple-bg);color:var(--purple-text);font-size:10px;padding:2px 8px;border-radius:20px;font-weight:600;">양도세</span><div style="font-size:16px;font-weight:800;color:var(--purple);margin:6px 0 3px;">1,100만원 환급</div><p style="font-size:11px;color:var(--text2);line-height:1.4;">취득가액 오류 수정으로 환급</p></div>
+    </div>
+    <div style="background:var(--gray);border-radius:10px;padding:14px 16px;">
+      <div style="font-size:12px;font-weight:700;color:var(--purple-text);margin-bottom:8px;">자주 묻는 질문</div>
+      <div class="faq-list">
+        <div class="faq"><div class="faq-q" onclick="toggleFaq(this.parentElement)"><span>경정청구 기간은 얼마나 되나요?</span><i class="ti ti-chevron-down"></i></div><div class="faq-body">법정 신고 기한으로부터 5년 이내입니다. 5년이 지난 건은 청구가 불가능하므로 빠르게 검토하시는 게 좋습니다.</div></div>
+        <div class="faq"><div class="faq-q" onclick="toggleFaq(this.parentElement)"><span>경정청구하면 세무조사 받을 수도 있나요?</span><i class="ti ti-chevron-down"></i></div><div class="faq-body">경정청구 자체가 세무조사의 직접적 원인은 아닙니다. 명확한 근거가 있다면 걱정하지 않으셔도 됩니다.</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 이의신청 -->
+  <div data-highlight="purple" style="border:2px solid #e8e8e8;border-radius:14px;padding:28px;margin-bottom:24px;transition:border-color .7s ease,box-shadow .7s ease;">
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
+      <div style="width:36px;height:36px;border-radius:10px;background:var(--purple-bg);display:flex;align-items:center;justify-content:center;font-size:18px;">📝</div>
+      <h3 style="font-size:18px;font-weight:800;">이의신청</h3>
+    </div>
+    <p style="font-size:14px;color:var(--text2);line-height:1.7;margin-bottom:20px;">과세 처분에 이의가 있다면 90일 이내에 이의신청을 해야 합니다. 기한을 놓치면 불복 기회가 줄어듭니다.</p>
+    <div style="display:flex;gap:0;margin-bottom:20px;overflow-x:auto;">
+      <div style="flex:1;min-width:80px;text-align:center;padding:12px 4px;position:relative;"><div style="width:36px;height:36px;border-radius:50%;background:var(--purple-bg);color:var(--purple-text);font-size:13px;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 8px;min-width:36px;flex-shrink:0;">1</div><div style="font-size:11px;font-weight:700;">과세 검토</div><div style="font-size:10px;color:var(--text2);line-height:1.4;">부과 처분 분석</div><div style="position:absolute;right:-4px;top:22px;color:#ccc;font-size:18px;">›</div></div>
+      <div style="flex:1;min-width:80px;text-align:center;padding:12px 4px;position:relative;"><div style="width:36px;height:36px;border-radius:50%;background:var(--purple-bg);color:var(--purple-text);font-size:13px;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 8px;min-width:36px;flex-shrink:0;">2</div><div style="font-size:11px;font-weight:700;">불복 전략</div><div style="font-size:10px;color:var(--text2);line-height:1.4;">쟁점·근거 파악</div><div style="position:absolute;right:-4px;top:22px;color:#ccc;font-size:18px;">›</div></div>
+      <div style="flex:1;min-width:80px;text-align:center;padding:12px 4px;position:relative;"><div style="width:36px;height:36px;border-radius:50%;background:var(--purple-bg);color:var(--purple-text);font-size:13px;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 8px;min-width:36px;flex-shrink:0;">3</div><div style="font-size:11px;font-weight:700;">신청서 제출</div><div style="font-size:10px;color:var(--text2);line-height:1.4;">90일 이내</div><div style="position:absolute;right:-4px;top:22px;color:#ccc;font-size:18px;">›</div></div>
+      <div style="flex:1;min-width:80px;text-align:center;padding:12px 4px;"><div style="width:36px;height:36px;border-radius:50%;background:var(--purple-bg);color:var(--purple-text);font-size:13px;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 8px;min-width:36px;flex-shrink:0;">4</div><div style="font-size:11px;font-weight:700;">결과 대응</div><div style="font-size:10px;color:var(--text2);line-height:1.4;">심판청구 연계</div></div>
+    </div>
+    <div style="background:var(--gray);border-radius:10px;padding:14px 16px;">
+      <div style="font-size:12px;font-weight:700;color:var(--purple-text);margin-bottom:8px;">자주 묻는 질문</div>
+      <div class="faq-list">
+        <div class="faq"><div class="faq-q" onclick="toggleFaq(this.parentElement)"><span>이의신청은 언제까지 해야 하나요?</span><i class="ti ti-chevron-down"></i></div><div class="faq-body">과세 처분을 받은 날로부터 90일 이내에 이의신청을 해야 합니다. 과세 통보를 받는 즉시 연락 주시는 것이 좋습니다.</div></div>
+        <div class="faq"><div class="faq-q" onclick="toggleFaq(this.parentElement)"><span>이의신청이 기각되면 어떻게 하나요?</span><i class="ti ti-chevron-down"></i></div><div class="faq-body">심판청구(조세심판원) → 행정소송 순서로 불복 절차를 이어갈 수 있습니다. 단계별 전략을 함께 수립해 드립니다.</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 조세불복 -->
+  <div data-highlight="purple" style="border:2px solid #e8e8e8;border-radius:14px;padding:28px;margin-bottom:28px;transition:border-color .7s ease,box-shadow .7s ease;">
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
+      <div style="width:36px;height:36px;border-radius:10px;background:var(--purple-bg);display:flex;align-items:center;justify-content:center;font-size:18px;">⚖️</div>
+      <h3 style="font-size:18px;font-weight:800;">조세불복</h3>
+    </div>
+    <p style="font-size:14px;color:var(--text2);line-height:1.7;margin-bottom:20px;">세무조사 결과나 과세 처분이 억울하다면 조세심판원에 심판청구를 할 수 있습니다. 혼자 대응하지 마세요.</p>
+    <div style="display:flex;gap:0;margin-bottom:20px;overflow-x:auto;">
+      <div style="flex:1;min-width:80px;text-align:center;padding:12px 4px;position:relative;"><div style="width:36px;height:36px;border-radius:50%;background:var(--purple-bg);color:var(--purple-text);font-size:13px;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 8px;min-width:36px;flex-shrink:0;">1</div><div style="font-size:11px;font-weight:700;">즉시 연락</div><div style="font-size:10px;color:var(--text2);line-height:1.4;">통보 후 바로</div><div style="position:absolute;right:-4px;top:22px;color:#ccc;font-size:18px;">›</div></div>
+      <div style="flex:1;min-width:80px;text-align:center;padding:12px 4px;position:relative;"><div style="width:36px;height:36px;border-radius:50%;background:var(--purple-bg);color:var(--purple-text);font-size:13px;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 8px;min-width:36px;flex-shrink:0;">2</div><div style="font-size:11px;font-weight:700;">쟁점 분석</div><div style="font-size:10px;color:var(--text2);line-height:1.4;">과세 근거 검토</div><div style="position:absolute;right:-4px;top:22px;color:#ccc;font-size:18px;">›</div></div>
+      <div style="flex:1;min-width:80px;text-align:center;padding:12px 4px;position:relative;"><div style="width:36px;height:36px;border-radius:50%;background:var(--purple-bg);color:var(--purple-text);font-size:13px;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 8px;min-width:36px;flex-shrink:0;">3</div><div style="font-size:11px;font-weight:700;">심판청구</div><div style="font-size:10px;color:var(--text2);line-height:1.4;">조세심판원</div><div style="position:absolute;right:-4px;top:22px;color:#ccc;font-size:18px;">›</div></div>
+      <div style="flex:1;min-width:80px;text-align:center;padding:12px 4px;"><div style="width:36px;height:36px;border-radius:50%;background:var(--purple-bg);color:var(--purple-text);font-size:13px;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 8px;min-width:36px;flex-shrink:0;">4</div><div style="font-size:11px;font-weight:700;">행정소송</div><div style="font-size:10px;color:var(--text2);line-height:1.4;">필요 시 연계</div></div>
+    </div>
+    <div style="background:var(--gray);border-radius:10px;padding:14px 16px;">
+      <div style="font-size:12px;font-weight:700;color:var(--purple-text);margin-bottom:8px;">자주 묻는 질문</div>
+      <div class="faq-list">
+        <div class="faq"><div class="faq-q" onclick="toggleFaq(this.parentElement)"><span>세무조사를 받으면 무조건 세금을 내야 하나요?</span><i class="ti ti-chevron-down"></i></div><div class="faq-body">그렇지 않습니다. 이의신청·심판청구·행정소송으로 불복할 수 있습니다. 과세 처분이 잘못됐다면 충분히 다툴 수 있습니다.</div></div>
+        <div class="faq"><div class="faq-q" onclick="toggleFaq(this.parentElement)"><span>심판청구 성공률은 어느 정도인가요?</span><i class="ti ti-chevron-down"></i></div><div class="faq-body">조세심판원 전체 인용률은 약 20~25% 수준입니다. 쟁점이 명확하고 근거가 충분한 경우 성공률이 높아집니다.</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div style="background:linear-gradient(135deg,#1a0e2e,#3d1a5a);border-radius:16px;padding:28px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;">
+    <div><h3 style="color:#fff;font-size:18px;font-weight:700;margin-bottom:6px;">억울하게 낸 세금, 5년 안에 돌려받을 수 있습니다</h3><p style="color:rgba(255,255,255,.65);font-size:13px;">무료 검토 후 환급 가능 금액을 먼저 확인해 드립니다.</p></div>
+    <div style="display:flex;gap:10px;flex-direction:column;min-width:200px;">
+      <button class="btn-gold" style="width:100%;" onclick="window.open('http://pf.kakao.com/_GsQcj/chat','_blank')">💬 카카오톡 바로 상담</button>
+      <button style="background:rgba(255,255,255,.15);border:1.5px solid rgba(255,255,255,.3);color:#fff;padding:12px 22px;border-radius:9px;font-size:13px;font-weight:700;cursor:pointer;width:100%;text-align:center;" onclick="goPage('contact','etc')">📋 상담 신청서 작성</button>
+    </div>
+  </div>
+</div>
+<footer><div><div class="ft-logo"><span>이룸</span>세무회계</div><div class="ft-info">서울 강남구 도곡로 129, 401호 · T 02-3462-3474 · taxkimyt@gmail.com</div><div class="ft-reg">사업자등록번호: 116-08-17476 · <a href="privacy-policy.html">개인정보처리방침</a></div></div><div class="ft-links"><a onclick="goPage('home')">홈</a><a onclick="goPage('svc-jang')">세무기장</a><a onclick="goPage('svc-tax')">재산세제</a><a onclick="goPage('svc-con')">컨설팅</a><a onclick="goPage('about')">회사소개</a><a onclick="goPage('contact')">상담 신청</a></div></footer>
+<script src="script.js"></script>
+<a href="http://pf.kakao.com/_GsQcj/chat" target="_blank" class="floating-kakao" aria-label="카카오톡 상담하기">
+  <i class="ti ti-brand-kakao-talk"></i>
+  <span class="floating-kakao-label">카톡 상담</span>
+</a>
+</body>
+</html>

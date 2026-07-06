@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>세무 서비스 안내 | 이룸세무회계</title>
+<meta property="og:title" content="세무 서비스 안내 | 이룸세무회계">
+<meta property="og:description" content="세무 기장, 재산세제 신고, 세무 컨설팅까지. 이룸세무회계의 서비스를 확인하세요.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://eroomtax.kr/services.html">
+<meta property="og:image" content="https://eroomtax.kr/og-image.jpg">
+<meta name="description" content="세무 기장, 재산세제 신고, 세무 컨설팅까지. 이룸세무회계의 서비스를 확인하세요.">
+<meta name="keywords" content="법인세무사,청년창업세무사,병의원세무사,개인사업자세무,이룸세무회계">
+<link rel="canonical" href="https://eroomtax.kr/services.html">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.44.0/tabler-icons.min.css">
+<link rel="stylesheet" href="styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AccountingService",
+  "name": "이룸세무회계",
+  "alternateName": "Eroom Tax",
+  "url": "https://eroomtax.kr/services.html",
+  "image": "https://eroomtax.kr/images/profile-kim.jpg",
+  "telephone": "+82-2-3462-3474",
+  "email": "taxkimyt@gmail.com",
+  "priceRange": "첫 상담 무료",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "도곡로 129, 401호 (남강빌딩)",
+    "addressLocality": "강남구",
+    "addressRegion": "서울특별시",
+    "addressCountry": "KR"
+  },
+  "founder": {
+    "@type": "Person",
+    "name": "김용태",
+    "jobTitle": "세무사"
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "서울특별시 강남구"
+  },
+  "sameAs": []
+}
+</script>
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+<link rel="apple-touch-icon" href="favicon-180.png">
+<!-- Google Analytics 4: 아래 G-0J1D7C7WG3를 실제 발급받은 측정 ID로 교체하세요 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0J1D7C7WG3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-0J1D7C7WG3');
+</script>
+<!-- 네이버 서치어드바이저 사이트 소유확인: 발급받은 코드로 content 값을 교체하세요 -->
+<meta name="naver-site-verification" content="2f60ec0e83733a129794c67e9b5554e11ee3fd20">
+</head>
+<body data-page="services">
+<!-- NAV -->
+<nav id="main-nav">
+  <div class="logo" onclick="goPage('home')"><span>이룸</span>세무회계</div>
+  <div class="nav-links">
+    <a class="nl active" id="nav-home" onclick="goPage('home')">홈</a>
+    <div class="nav-dropdown nl" id="nav-services">
+      <a onclick="toggleDropdown(event)">세무서비스</a>
+      <div class="dropdown-menu">
+        <a onclick="goSvc('svc-jang')"><i class="ti ti-book" style="color:#1DB8A0;"></i>세무 기장</a>
+        <a onclick="goSvc('svc-tax')"><i class="ti ti-home" style="color:#B8900A;"></i>재산세제 신고</a>
+        <a onclick="goSvc('svc-con')"><i class="ti ti-chart-dots" style="color:#8B6BB1;"></i>컨설팅</a>
+      </div>
+    </div>
+    <a class="nl" id="nav-about" onclick="goPage('about')">회사소개</a>
+    <a class="nl" id="nav-contact" onclick="goPage('contact')">상담 신청</a>
+  </div>
+  <div class="nav-right">
+    <button class="nav-cta" onclick="window.open('http://pf.kakao.com/_GsQcj/chat','_blank')">무료 상담</button>
+    <button id="hamburger" onclick="toggleMenu()" aria-label="메뉴">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div id="mobile-menu">
+  <a onclick="goPage('home');toggleMenu()">홈</a>
+  <a onclick="toggleMobileSvc()" style="display:flex;align-items:center;justify-content:space-between;">
+    세무서비스 <span id="mobile-svc-arrow" style="font-size:18px;font-weight:700;transition:transform .2s;line-height:1;">▾</span>
+  </a>
+  <div id="mobile-svc-sub" style="display:none;background:var(--gray);border-radius:8px;margin:0 0 4px;">
+    <a onclick="goPage('svc-jang');toggleMenu()" style="padding-left:24px;border-bottom:1px solid var(--border);">세무 기장</a>
+    <a onclick="goPage('svc-tax');toggleMenu()" style="padding-left:24px;border-bottom:1px solid var(--border);">재산세제 신고</a>
+    <a onclick="goPage('svc-con');toggleMenu()" style="padding-left:24px;border-bottom:none;">컨설팅</a>
+  </div>
+  <a onclick="goPage('about');toggleMenu()">회사소개</a>
+  <a onclick="goPage('contact');toggleMenu()">상담 신청</a>
+</div>
+<div class="page active" id="page-services">
+<div class="grad-bar"></div>
+<div class="section" style="padding-top:52px;">
+  <span class="sec-tag tag-t">이룸세무회계 서비스</span>
+  <h1 class="sec-title" style="font-size:28px;">개인부터 법인까지<br>모든 세무 니즈를 해결합니다</h1>
+  <p class="sec-sub">단순 신고를 넘어 절세와 리스크 관리까지 한 곳에서.</p>
+  <div class="svc-grid">
+    <div class="svc"><div class="card-icon ic-t"><i class="ti ti-building"></i></div><h4>법인 세무</h4><p>법인세 신고, 결산, 세무조정 등 기업 세무의 모든 것</p><ul><li>법인세 신고 및 결산</li><li>세무조정 및 절세 전략</li><li>대표 급여·배당 구조 최적화</li><li>가지급금 정리 플랜</li></ul><a href="svc-jang.html" class="svc-arrow" style="text-decoration:none;">자세히 보기 →</a></div>
+    <div class="svc"><div class="card-icon ic-p"><i class="ti ti-rocket"></i></div><h4>청년창업 세무</h4><p>창업 초기부터 투자유치까지 성장 단계별 맞춤 지원</p><ul><li>법인 설립 (기장 계약 시 무료)</li><li>R&amp;D 세액공제 신청</li><li>스톡옵션·투자유치 세무</li><li>정부지원사업 서류 대응</li></ul><a href="svc-jang.html" class="svc-arrow" style="text-decoration:none;">자세히 보기 →</a></div>
+    <div class="svc"><div class="card-icon ic-p"><i class="ti ti-stethoscope"></i></div><h4>병의원 세무</h4><p>개원 준비부터 의료법인 전환까지 병의원 전문</p><ul><li>개원 세무 세팅 및 기장</li><li>인건비 구조 최적화</li><li>성실신고확인 대응</li><li>의료법인 전환 검토</li></ul><a href="svc-jang.html" class="svc-arrow" style="text-decoration:none;">자세히 보기 →</a></div>
+    <div class="svc"><div class="card-icon ic-g"><i class="ti ti-user"></i></div><h4>개인 세무</h4><p>종합소득세·부가세·개인사업자 기장</p><ul><li>종합소득세 신고 (5월)</li><li>부가세 신고 · 3.3% 환급</li><li>개인사업자 기장대리</li></ul><a href="svc-jang.html" class="svc-arrow" style="text-decoration:none;">자세히 보기 →</a></div>
+    <div class="svc"><div class="card-icon ic-g"><i class="ti ti-home"></i></div><h4>재산세 컨설팅</h4><p>양도세·증여세·상속세 전문 처리</p><ul><li>양도소득세 절세 시뮬레이션</li><li>증여세 절세 컨설팅</li><li>상속세 신고 및 사후관리</li></ul><a href="svc-tax.html" class="svc-arrow" style="text-decoration:none;">자세히 보기 →</a></div>
+    <div class="svc"><div class="card-icon ic-t"><i class="ti ti-chart-line"></i></div><h4>절세 컨설팅</h4><p>체계적 분석으로 최적의 절세 방안 제시</p><ul><li>세무 리스크 진단</li><li>맞춤형 절세 전략 수립</li><li>세무 고문 (월 자문)</li></ul><a href="svc-con.html" class="svc-arrow" style="text-decoration:none;">자세히 보기 →</a></div>
+    <div class="svc"><div class="card-icon ic-d"><i class="ti ti-search"></i></div><h4>세무조사 컨설팅</h4><p>세무조사 대응부터 사후관리까지</p><ul><li>세무조사 사전 준비</li><li>조사 입회 및 대응</li><li>과세예고 검토</li></ul><a href="svc-con.html" class="svc-arrow" style="text-decoration:none;">자세히 보기 →</a></div>
+    <div class="svc"><div class="card-icon" style="width:40px;height:40px;border-radius:10px;background:#FFF0F0;color:#c41a1a;display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:12px;"><i class="ti ti-scale"></i></div><h4>조세불복 &amp; 이의신청</h4><p>과세 결과에 이의가 있을 때 단계별 대응</p><ul><li>이의신청·심판청구</li><li>행정소송 대응</li></ul><a href="svc-con.html" class="svc-arrow" style="text-decoration:none;">자세히 보기 →</a></div>
+    <div class="svc"><div class="card-icon" style="width:40px;height:40px;border-radius:10px;background:var(--teal-bg);color:var(--teal-text);display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:12px;"><i class="ti ti-receipt-refund"></i></div><h4>경정청구</h4><p>5년 이내 납부 세금, 돌려받을 수 있습니다</p><ul><li>과거 신고 오류·누락 발굴</li><li>환급 가능 여부 무료 확인</li></ul><a href="svc-con.html" class="svc-arrow" style="text-decoration:none;">자세히 보기 →</a></div>
+    <div class="svc"><div class="card-icon ic-t"><i class="ti ti-star"></i></div><span class="svc-badge tag-t" style="margin-bottom:10px;">기장 계약 시 무료</span><h4>법인 설립</h4><p>창업부터 법인 설립까지 원스톱 서비스</p><ul><li>법인 설립 컨설팅</li><li>개인사업자 법인 전환</li></ul><a href="svc-jang.html" class="svc-arrow" style="text-decoration:none;">자세히 보기 →</a></div>
+    <div class="svc"><div class="card-icon ic-g"><i class="ti ti-receipt"></i></div><h4>급여 · 4대보험</h4><p>급여 계산부터 4대보험·원천세 신고까지</p><ul><li>급여 계산 및 명세서 발급</li><li>연말정산 위탁대행</li></ul><a href="svc-jang.html" class="svc-arrow" style="text-decoration:none;">자세히 보기 →</a></div>
+  </div>
+</div>
+<div class="cta-sec">
+  <h2>어떤 서비스가 필요하신지<br>편하게 말씀해 주세요</h2>
+  <p>업종·규모만 알려주시면 맞춤 견적을 바로 안내드립니다.</p>
+  <div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:20px;">
+    <button class="btn-gold" onclick="window.open('http://pf.kakao.com/_GsQcj/chat','_blank')">💬 카카오톡 상담</button>
+    <button class="btn-dark" onclick="goPage('contact')">📋 상담 신청 폼</button>
+    <button class="btn-out" onclick="goPage('pricing')">보수표 확인</button>
+  </div>
+</div>
+<footer>
+  <div><div class="ft-logo"><span>이룸</span>세무회계</div><div class="ft-slogan">세금에 대한 모든 것, 이룸세무회계</div><div class="ft-info">서울 강남구 도곡로 129, 401호 · T 02-3462-3474 · taxkimyt@gmail.com</div><div class="ft-reg">사업자등록번호: 116-08-17476 · <a href="privacy-policy.html">개인정보처리방침</a></div></div>
+  <div class="ft-links"><a onclick="goPage('home')">홈</a><a onclick="goPage('services')">서비스</a><a onclick="goPage('about')">회사소개</a><a onclick="goPage('contact')">상담 신청</a></div>
+</footer>
+<script src="script.js"></script>
+<a href="http://pf.kakao.com/_GsQcj/chat" target="_blank" class="floating-kakao" aria-label="카카오톡 상담하기">
+  <i class="ti ti-brand-kakao-talk"></i>
+  <span class="floating-kakao-label">카톡 상담</span>
+</a>
+</body>
+</html>

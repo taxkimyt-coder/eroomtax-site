@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>이룸세무회계 | 강남 병의원 법인·청년창업 세무</title>
+<meta property="og:title" content="이룸세무회계 | 강남 병의원 법인·청년창업 세무">
+<meta property="og:description" content="법인·청년창업·병의원 세무 전문. 대표세무사 직접 처리, 첫 상담 무료.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://eroomtax.kr/">
+<meta property="og:image" content="https://eroomtax.kr/og-image.jpg">
+<meta name="description" content="법인·청년창업·병의원 세무 전문. 대표세무사 직접 처리, 첫 상담 무료.">
+<meta name="keywords" content="법인세무사,청년창업세무사,병의원세무사,개인사업자세무,이룸세무회계">
+<link rel="canonical" href="https://eroomtax.kr/">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.44.0/tabler-icons.min.css">
+<link rel="stylesheet" href="styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AccountingService",
+  "name": "이룸세무회계",
+  "alternateName": "Eroom Tax",
+  "url": "https://eroomtax.kr/",
+  "image": "https://eroomtax.kr/images/profile-kim.jpg",
+  "telephone": "+82-2-3462-3474",
+  "email": "taxkimyt@gmail.com",
+  "priceRange": "첫 상담 무료",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "도곡로 129, 401호 (남강빌딩)",
+    "addressLocality": "강남구",
+    "addressRegion": "서울특별시",
+    "addressCountry": "KR"
+  },
+  "founder": {
+    "@type": "Person",
+    "name": "김용태",
+    "jobTitle": "세무사"
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "서울특별시 강남구"
+  },
+  "sameAs": []
+}
+</script>
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+<link rel="apple-touch-icon" href="favicon-180.png">
+<!-- Google Analytics 4: 아래 G-0J1D7C7WG3를 실제 발급받은 측정 ID로 교체하세요 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0J1D7C7WG3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-0J1D7C7WG3');
+</script>
+<!-- 네이버 서치어드바이저 사이트 소유확인: 발급받은 코드로 content 값을 교체하세요 -->
+<meta name="naver-site-verification" content="2f60ec0e83733a129794c67e9b5554e11ee3fd20">
+</head>
+<body data-page="home">
+<!-- NAV -->
+<nav id="main-nav">
+  <div class="logo" onclick="goPage('home')"><span>이룸</span>세무회계</div>
+  <div class="nav-links">
+    <a class="nl active" id="nav-home" onclick="goPage('home')">홈</a>
+    <div class="nav-dropdown nl" id="nav-services">
+      <a onclick="toggleDropdown(event)">세무서비스</a>
+      <div class="dropdown-menu">
+        <a onclick="goSvc('svc-jang')"><i class="ti ti-book" style="color:#1DB8A0;"></i>세무 기장</a>
+        <a onclick="goSvc('svc-tax')"><i class="ti ti-home" style="color:#B8900A;"></i>재산세제 신고</a>
+        <a onclick="goSvc('svc-con')"><i class="ti ti-chart-dots" style="color:#8B6BB1;"></i>컨설팅</a>
+      </div>
+    </div>
+    <a class="nl" id="nav-about" onclick="goPage('about')">회사소개</a>
+    <a class="nl" id="nav-contact" onclick="goPage('contact')">상담 신청</a>
+  </div>
+  <div class="nav-right">
+    <button class="nav-cta" onclick="window.open('http://pf.kakao.com/_GsQcj/chat','_blank')">무료 상담</button>
+    <button id="hamburger" onclick="toggleMenu()" aria-label="메뉴">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div id="mobile-menu">
+  <a onclick="goPage('home');toggleMenu()">홈</a>
+  <a onclick="toggleMobileSvc()" style="display:flex;align-items:center;justify-content:space-between;">
+    세무서비스 <span id="mobile-svc-arrow" style="font-size:18px;font-weight:700;transition:transform .2s;line-height:1;">▾</span>
+  </a>
+  <div id="mobile-svc-sub" style="display:none;background:var(--gray);border-radius:8px;margin:0 0 4px;">
+    <a onclick="goPage('svc-jang');toggleMenu()" style="padding-left:24px;border-bottom:1px solid var(--border);">세무 기장</a>
+    <a onclick="goPage('svc-tax');toggleMenu()" style="padding-left:24px;border-bottom:1px solid var(--border);">재산세제 신고</a>
+    <a onclick="goPage('svc-con');toggleMenu()" style="padding-left:24px;border-bottom:none;">컨설팅</a>
+  </div>
+  <a onclick="goPage('about');toggleMenu()">회사소개</a>
+  <a onclick="goPage('contact');toggleMenu()">상담 신청</a>
+</div>
+<div class="page active" id="page-home">
+<div class="grad-bar"></div>
+<div class="hero fade-up">
+  <div class="hero-tag"><div class="pulse"></div>법인 &amp; 청년창업 전문</div>
+  <h1>세금 걱정은 저희가,<br>대표님은 <em>사업에만</em> 집중하세요.</h1>
+  <p class="hero-sub">이룸세무회계는 IT·청년창업·병의원 업종 특화 세무사사무소입니다.<br>장부만 맡기는 곳이 아닙니다. 대표님 사업의 세무 파트너입니다.</p>
+  <div class="hero-btns" style="display:flex;gap:10px;flex-wrap:wrap;">
+    <button class="btn-dark" onclick="window.open('http://pf.kakao.com/_GsQcj/chat','_blank')">💬 카카오톡으로 바로 상담</button>
+    <button class="btn-out" onclick="goPage('contact')">📋 상담 신청서 작성하기</button>
+  </div>
+  <div class="badges">
+    <span class="badge">IT · 청년창업 전문</span>
+    <span class="badge">병의원 특화</span>
+    <span class="badge">법인 설립부터 기장까지</span>
+    <span class="badge">첫 상담 무료</span>
+    <span class="badge">방문 + 비대면 상담</span>
+  </div>
+</div>
+
+
+<div class="report-section fade-up">
+  <div class="report-inner">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;">
+      <div>
+        <span class="report-tag">📊 매월 실적 보고서</span>
+        <div class="report-title">숫자로 보는 우리 사업장<br><span>매월 카카오톡으로 받아보세요</span></div>
+        <p class="report-sub">기장 계약 고객에게 매월 자동 발송됩니다.<br>매출·매입·손익·부가세 4종 보고서로 사업 현황을 한눈에 확인하세요.</p>
+        <div class="report-chips">
+          <span class="report-chip">📈 매출현황 보고서</span>
+          <span class="report-chip">🛒 매입현황 보고서</span>
+          <span class="report-chip">💰 손익 보고서</span>
+          <span class="report-chip">📋 부가세 보고서</span>
+        </div>
+        <div class="report-tabs">
+          <button class="rtab active" onclick="openRtab('매출',this)">매출현황</button>
+          <button class="rtab" onclick="openRtab('매입',this)">매입현황</button>
+          <button class="rtab" onclick="openRtab('손익',this)">손익</button>
+          <button class="rtab" onclick="openRtab('부가세',this)">부가세</button>
+        </div>
+      </div>
+      <div class="report-slides">
+        <div class="report-slide active" id="rslide-매출">
+          <div class="report-mockup">
+            <img loading="lazy" decoding="async" src="images/report-revenue.jpg" alt="매출현황 보고서">
+          </div>
+        </div>
+        <div class="report-slide" id="rslide-매입">
+          <div class="report-mockup">
+            <img loading="lazy" decoding="async" src="images/report-purchase.jpg" alt="매입현황 보고서">
+          </div>
+        </div>
+        <div class="report-slide" id="rslide-손익">
+          <div class="report-mockup">
+            <img loading="lazy" decoding="async" src="images/report-profit.jpg" alt="손익 보고서">
+          </div>
+        </div>
+        <div class="report-slide" id="rslide-부가세">
+          <div class="report-mockup">
+            <img loading="lazy" decoding="async" src="images/report-vat.jpg" alt="부가세 보고서">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="stats-bar">
+  <div class="stats-inner" style="grid-template-columns:repeat(4,1fr);">
+    <div class="stat"><div class="stat-n">2,500<span style="font-size:20px;">+</span></div><div class="stat-l">누적 고객 수</div></div>
+    <div class="stat"><div class="stat-n">732<span style="font-size:20px;">만원</span></div><div class="stat-l">평균 환급 금액</div></div>
+    <div class="stat"><div class="stat-n">4.7<span style="font-size:20px;">/5</span></div><div class="stat-l">고객 만족도</div></div>
+    <div class="stat"><div class="stat-n">0<span style="font-size:20px;">원</span></div><div class="stat-l">첫 상담 비용</div></div>
+  </div>
+</div>
+
+<div class="section fade-up">
+  <span class="sec-tag tag-t">이룸을 선택하는 이유</span>
+  <div class="sec-title">이룸세무회계를 선택하는<br>4가지 이유</div>
+  <p class="sec-sub">신고만 하고 끝나는 세무사는 넘쳐납니다. 이룸은 대표님 사업을 함께 고민합니다.</p>
+  <div class="card-grid">
+    <div class="card"><div class="card-icon ic-t"><i class="ti ti-chart-bar"></i></div><h4>세금이 아닌 사업의 파트너</h4><p>신고만 하고 끝나지 않습니다. 매월 실적 보고서로 대표님 사업의 수익 흐름을 함께 보고, 절세 기회를 먼저 찾아드립니다.</p></div>
+    <div class="card"><div class="card-icon ic-g"><i class="ti ti-bell"></i></div><h4>묻기 전에 먼저 알려드립니다</h4><p>신고 기한이 다가오면 저희가 먼저 연락드립니다. 고객이 물어봐야 움직이는 세무사가 아닙니다.</p></div>
+    <div class="card"><div class="card-icon ic-p"><i class="ti ti-user-check"></i></div><h4>대표 세무사가 끝까지 검토합니다</h4><p>담당 직원이 바뀌어도 대표 세무사 김용태가 모든 신고서를 직접 검토합니다. 대표님 사업을 가장 깊이 아는 사람이 항상 최종 책임을 집니다.</p></div>
+    <div class="card"><div class="card-icon ic-d"><i class="ti ti-award"></i></div><h4>숫자가 증명합니다</h4><p>누적 고객 2,500명+, 평균 세제혜택 732만원, 고객 만족도 4.7. 좋은 세무사는 말이 아니라 숫자로 보입니다.</p></div>
+  </div>
+</div>
+
+<div class="section fade-up">
+  <span class="sec-tag tag-p">서비스 절차</span>
+  <div class="sec-title">기장 계약부터 완료까지<br>이렇게 진행됩니다</div>
+  <p class="sec-sub">연락 한 번이면 시작됩니다.</p>
+  <div class="process">
+    <div class="ps"><div class="ps-num">1</div><div class="ps-body"><div class="ps-title">카카오톡 or 이메일로 첫 연락</div><div class="ps-desc">업종과 매출 규모만 알려주시면 됩니다. 5분 안에 응답, 견적 상담은 무료입니다.</div><span class="ps-badge tag-t">견적 상담 무료</span></div></div>
+    <div class="ps"><div class="ps-num">2</div><div class="ps-body"><div class="ps-title">맞춤 견적 안내 &amp; 계약</div><div class="ps-desc">사업 현황에 맞는 기장료와 포함 서비스를 명확하게 안내드립니다. 숨은 비용 없습니다.</div><span class="ps-badge tag-g">투명한 보수표</span></div></div>
+    <div class="ps"><div class="ps-num">3</div><div class="ps-body"><div class="ps-title">홈택스 수임동의 &amp; 자료 인수</div><div class="ps-desc">홈택스 수임동의 클릭 한 번이면 끝납니다. 기존 세무사 이전도 도와드립니다.</div><span class="ps-badge tag-p">이전도 간편하게</span></div></div>
+    <div class="ps"><div class="ps-num">4</div><div class="ps-body"><div class="ps-title">월별 기장 &amp; 세금 신고</div><div class="ps-desc">매월 장부 기장, 원천세·부가세 신고까지 챙겨드립니다. 중요 일정은 먼저 알려드립니다.</div><span class="ps-badge tag-t">기한 누락 없음</span></div></div>
+    <div class="ps"><div class="ps-num">5</div><div class="ps-body"><div class="ps-title">연간 결산 &amp; 절세 컨설팅</div><div class="ps-desc">연말 결산 후 내년 절세 방향까지 함께 고민합니다. 단순 신고로 끝나지 않습니다.</div><span class="ps-badge tag-g">절세까지 완성</span></div></div>
+  </div>
+</div>
+
+<div class="section fade-up">
+  <span class="sec-tag tag-p">세금 가이드</span>
+  <div class="sec-title">궁금한 세금 정보,<br>이룸 블로그에서 바로 확인하세요</div>
+  <p class="sec-sub">법인·청년창업·병의원·양도세·증여세까지 — 실무 중심으로 쉽게 정리했습니다.</p>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px;margin-bottom:24px;">
+    <div class="card" style="cursor:pointer;" onclick="window.open('https://blog.naver.com/eroom-tax','_blank')"><div class="card-icon ic-t"><i class="ti ti-building"></i></div><h4>법인·절세</h4><p>대표 급여·가지급금·결산 절세 포인트</p></div>
+    <div class="card" style="cursor:pointer;" onclick="window.open('https://blog.naver.com/eroom-tax','_blank')"><div class="card-icon ic-p"><i class="ti ti-stethoscope"></i></div><h4>병의원</h4><p>개원 세무 세팅·성실신고 대비</p></div>
+    <div class="card" style="cursor:pointer;" onclick="window.open('https://blog.naver.com/eroom-tax','_blank')"><div class="card-icon ic-p"><i class="ti ti-rocket"></i></div><h4>청년창업</h4><p>법인 설립·R&D 공제·투자유치 세무</p></div>
+    <div class="card" style="cursor:pointer;" onclick="window.open('https://blog.naver.com/eroom-tax','_blank')"><div class="card-icon ic-g"><i class="ti ti-home"></i></div><h4>양도·증여세</h4><p>비과세 요건·증여 한도·절세 전략</p></div>
+  </div>
+  <button class="btn-dark" onclick="window.open('https://blog.naver.com/eroom-tax','_blank')" style="display:flex;align-items:center;gap:8px;">
+    <i class="ti ti-arrow-right"></i> 이룸 블로그 전체 보기
+  </button>
+</div>
+
+<div class="section fade-up" style="padding-left:0;padding-right:0;">
+  <div style="padding:0 40px;">
+    <span class="sec-tag tag-t">고객 후기</span>
+    <div class="sec-title">함께한 고객 이야기</div>
+    <p class="sec-sub">이룸세무회계와 함께한 대표님들의 실제 후기입니다.</p>
+  </div>
+
+  <div class="marquee-wrap">
+    <div class="marquee-track" id="revTrack">
+      <div class="rev" style="width:280px;">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;">
+          <span class="rev-tag" style="background:#FEE500;color:#1a1a2e;font-size:10px;padding:3px 8px;border-radius:20px;font-weight:700;">💬 카카오톡 실제 후기</span>
+          <div class="stars">★★★★★</div>
+        </div>
+        <img loading="lazy" decoding="async" src="images/review-kakao.jpg" style="width:100%;border-radius:10px;margin-bottom:8px;" alt="카톡 후기">
+        <div class="rev-from"><strong>기장 계약 고객</strong> · 2026년 6월</div>
+      </div>
+      <div class="rev" style="width:280px;">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;">
+          <span class="rev-tag" style="background:#FEE500;color:#1a1a2e;font-size:10px;padding:3px 8px;border-radius:20px;font-weight:700;">💬 카카오톡 실제 후기</span>
+          <div class="stars">★★★★★</div>
+        </div>
+        <img loading="lazy" decoding="async" src="images/review-kakao-2.jpg" style="width:100%;border-radius:10px;margin-bottom:8px;" alt="카톡 후기">
+        <div class="rev-from"><strong>기장 계약 고객</strong> · 2026년 6월</div>
+      </div>
+
+      <div class="rev">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px;"><span class="rev-tag tag-t">IT 스타트업</span><div class="stars">★★★★★</div></div>
+        <div style="font-size:12px;color:var(--text3);font-style:italic;margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid var(--border);">"투자유치 앞두고 재무 구조를 갑자기 정리해야 했던 상황"</div>
+        <p class="rev-text">시리즈A 준비하면서 기존 세무사는 "장부대로 드리면 된다"고 했습니다. 이룸에 물어봤더니 <strong>투자자 눈높이에서 구조 자체를 같이 다시 잡아주셨어요.</strong></p>
+        <div class="rev-from"><strong>역삼동 SaaS 스타트업 대표</strong> · 거래 2년</div>
+      </div>
+
+      <div class="rev">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px;"><span class="rev-tag tag-p">병의원</span><div class="stars">★★★★★</div></div>
+        <div style="font-size:12px;color:var(--text3);font-style:italic;margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid var(--border);">"개원 전부터 세무를 잘못 세팅하면 나중에 고생한다고 들었던 상황"</div>
+        <p class="rev-text">다른 사무소 두 군데서 견적만 받았는데, 이룸은 처음 상담에서 <strong>면세·과세 겸업 구조부터 직원 고용 형태까지 먼저 짚어줬습니다.</strong></p>
+        <div class="rev-from"><strong>서초구 치과 원장</strong> · 거래 1년 6개월</div>
+      </div>
+
+      <div class="rev">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px;"><span class="rev-tag tag-g">법인</span><div class="stars">★★★★★</div></div>
+        <div style="font-size:12px;color:var(--text3);font-style:italic;margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid var(--border);">"계약 전날 밤 갑자기 세금 처리가 걱정됐던 상황"</div>
+        <p class="rev-text">거래처 계약 조건이 막판에 바뀌어서 밤 10시에 카카오톡으로 여쭤봤습니다. <strong>30분도 안 돼서 답이 왔고, 덕분에 다음 날 확신 있게 계약했어요.</strong></p>
+        <div class="rev-from"><strong>강남구 IT 솔루션 법인 대표</strong> · 거래 3년</div>
+      </div>
+
+      <div class="rev">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px;"><span class="rev-tag tag-t">IT 스타트업</span><div class="stars">★★★★★</div></div>
+        <div style="font-size:12px;color:var(--text3);font-style:italic;margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid var(--border);">"R&D 세액공제를 받을 수 있는지조차 몰랐던 상황"</div>
+        <p class="rev-text">기존 세무사 3년 동안 한 번도 R&D 공제 얘기를 못 들었는데, 이룸으로 옮기고 첫 해에 <strong>어떤 비용이 해당되는지부터 같이 챙겨줘서 처음으로 공제를 받았습니다.</strong></p>
+        <div class="rev-from"><strong>역삼동 AI 솔루션 스타트업 대표</strong> · 거래 1년 6개월</div>
+      </div>
+
+      <div class="rev">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px;"><span class="rev-tag" style="background:var(--purple-bg);color:var(--purple-text);font-size:10px;padding:2px 8px;border-radius:20px;font-weight:600;">경정청구</span><div class="stars">★★★★★</div></div>
+        <div style="font-size:12px;color:var(--text3);font-style:italic;margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid var(--border);">"이미 낸 세금인데 돌려받을 수 있다는 연락을 먼저 받은 상황"</div>
+        <p class="rev-text">3년 전 신고에서 빠진 공제 항목이 있다고 먼저 연락이 왔습니다. <strong>경정청구 후 생각지도 못한 환급이 들어왔어요.</strong> 제가 요청한 것도 아닌데 먼저 챙겨줬습니다.</p>
+        <div class="rev-from"><strong>강남구 개인사업자</strong> · 거래 2년</div>
+      </div>
+
+      <div class="rev">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px;"><span class="rev-tag" style="background:#E8F4FF;color:#1a6fc4;font-size:10px;padding:2px 8px;border-radius:20px;font-weight:600;">프리랜서</span><div class="stars">★★★★★</div></div>
+        <div style="font-size:12px;color:var(--text3);font-style:italic;margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid var(--border);">"앱으로 혼자 신고하다가 소명 요구를 받은 상황"</div>
+        <p class="rev-text">홈택스 앱으로 혼자 신고했다가 국세청에서 소명 요구가 왔습니다. <strong>어떤 서류를 어떻게 준비해야 하는지 단계별로 안내해 주셔서 별 탈 없이 마무리됐어요.</strong></p>
+        <div class="rev-from"><strong>IT 프리랜서 개발자</strong> · 거래 1년</div>
+      </div>
+
+      <div class="rev">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px;"><span class="rev-tag" style="background:#FFF0F0;color:#c41a1a;font-size:10px;padding:2px 8px;border-radius:20px;font-weight:600;">조세불복</span><div class="stars">★★★★★</div></div>
+        <div style="font-size:12px;color:var(--text3);font-style:italic;margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid var(--border);">"세무조사 결과에 이의가 있었지만 어떻게 해야 할지 몰랐던 상황"</div>
+        <p class="rev-text">과세 결과가 납득이 안 됐는데 어디서부터 시작해야 할지 막막했습니다. <strong>심판청구 전 과정을 같이 준비해 주셔서 혼자라는 느낌이 없었어요.</strong></p>
+        <div class="rev-from"><strong>강남구 법인 대표</strong> · 거래 2년 3개월</div>
+      </div>
+
+      <div class="rev">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px;"><span class="rev-tag tag-p">병의원</span><div class="stars">★★★★★</div></div>
+        <div style="font-size:12px;color:var(--text3);font-style:italic;margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid var(--border);">"성실신고 대상이 되면서 갑자기 세금 부담이 커진 상황"</div>
+        <p class="rev-text">수입이 늘면서 성실신고 대상이 됐고 세금이 확 올랐습니다. 이룸에서 <strong>비용 구조를 다시 점검해줬더니 전년 대비 세금 부담이 눈에 띄게 줄었어요.</strong></p>
+        <div class="rev-from"><strong>서초구 피부과 원장</strong> · 거래 2년</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="section fade-up">
+  <span class="sec-tag tag-t">자주 묻는 질문</span>
+  <div class="sec-title">FAQ</div>
+  <p class="sec-sub">상담 전 가장 많이 물어보시는 질문들입니다.</p>
+  <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q">기장료에 어떤 서비스가 포함되나요?<i class="ti ti-chevron-down faq-icon"></i></div><div class="faq-a">월 기장료에는 장부 기장, 부가세 신고(연 2~4회), 원천세 신고(매월), 4대보험 취득·상실 신고가 기본 포함됩니다. 법인세·종합소득세 신고는 연 1회 별도 청구됩니다. 기장 계약 고객은 카카오톡 세무 자문도 무제한으로 이용 가능합니다.</div></div>
+  <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q">기존 세무사에서 이룸으로 변경하면 어떻게 되나요?<i class="ti ti-chevron-down faq-icon"></i></div><div class="faq-a">기존 세무대리인에게 해지 의사를 전달하신 후 연락 주시면 됩니다. 홈택스 수임동의 변경은 클릭 한 번이며, 자료 인수인계도 도와드립니다.</div></div>
+  <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q">비대면으로 기장 계약이 가능한가요?<i class="ti ti-chevron-down faq-icon"></i></div><div class="faq-a">네, 가능합니다. 계약부터 자료 전달, 신고 확인까지 모두 카카오톡·이메일로 진행 가능합니다. 강남·서초 인근이시면 방문 상담도 환영합니다.</div></div>
+  <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q">창업 예정인데 언제 세무사를 선임해야 하나요?<i class="ti ti-chevron-down faq-icon"></i></div><div class="faq-a">사업자등록 전에 상담하시는 게 가장 좋습니다. 개인·법인 선택에 따라 세금 구조가 완전히 달라지기 때문입니다. 기장 계약 시 사업자등록은 무료로 진행해드립니다.</div></div>
+  <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q">세무조사를 받게 되면 어떻게 하나요?<i class="ti ti-chevron-down faq-icon"></i></div><div class="faq-a">당황하지 마시고 바로 연락 주세요. 기장 계약 고객은 세무조사 대응 및 조사관 입회가 포함됩니다. 조사 사전 준비부터 사후 이의신청·조세불복까지 함께 대응합니다.</div></div>
+  <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q">경정청구로 세금을 돌려받을 수 있나요?<i class="ti ti-chevron-down faq-icon"></i></div><div class="faq-a">이미 납부한 세금도 5년 이내라면 경정청구로 환급받을 수 있습니다. 과거 신고 내역 검토 후 환급 가능 여부를 무료로 확인해 드립니다.</div></div>
+</div>
+
+<div class="cta-sec fade-up">
+  <h2>세금 고민, 혼자 안고 계시지 마세요</h2>
+  <p>지금 연락 주시면 대표 세무사가 직접 확인하고 5분 안에 응답드립니다</p>
+  <div class="cta-chips">
+    <span class="cta-chip">✓ 첫 상담 무료</span>
+    <span class="cta-chip">✓ 카카오톡 5분 응답</span>
+    <span class="cta-chip">✓ 방문 + 비대면 상담</span>
+    <span class="cta-chip">✓ 전국 어디서나 OK</span>
+  </div>
+  <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;">
+    <button class="btn-gold" style="font-size:15px;padding:14px 28px;" onclick="window.open('http://pf.kakao.com/_GsQcj/chat','_blank')">💬 카카오톡으로 바로 상담</button>
+    <button class="btn-out" style="font-size:15px;padding:14px 28px;" onclick="goPage('contact')">📋 상담 신청서 작성하기</button>
+  </div>
+</div>
+<footer>
+  <div><div class="ft-logo"><span>이룸</span>세무회계</div><div class="ft-slogan">세금에 대한 모든 것, 이룸세무회계</div><div class="ft-info">서울 강남구 도곡로 129, 401호 (역삼동 839-12, 남강빌딩)<br>T 02-3462-3474 · M 010-7770-3474 · taxkimyt@gmail.com<br><span style="color:var(--teal)">🚇 강남역 4번 출구 도보 5분</span></div><div class="ft-copy">© 2025 이룸세무회계. All rights reserved.</div><div class="ft-reg">사업자등록번호: 116-08-17476 · <a href="privacy-policy.html">개인정보처리방침</a></div></div>
+  <div class="ft-links"><a onclick="goPage('home')">홈</a><a onclick="goPage('services')">서비스</a><a onclick="goPage('about')">회사소개</a><a onclick="goPage('contact')">상담 신청</a></div>
+</footer>
+<script src="script.js"></script>
+<a href="http://pf.kakao.com/_GsQcj/chat" target="_blank" class="floating-kakao" aria-label="카카오톡 상담하기">
+  <i class="ti ti-brand-kakao-talk"></i>
+  <span class="floating-kakao-label">카톡 상담</span>
+</a>
+</body>
+</html>

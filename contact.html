@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>상담 신청 | 이룸세무회계 무료 상담</title>
+<meta property="og:title" content="상담 신청 | 이룸세무회계 무료 상담">
+<meta property="og:description" content="이룸세무회계 무료 상담 신청. 대표 세무사가 직접 확인하고 5분 내 응답드립니다.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://eroomtax.kr/contact.html">
+<meta property="og:image" content="https://eroomtax.kr/og-image.jpg">
+<meta name="description" content="이룸세무회계 무료 상담 신청. 대표 세무사가 직접 확인하고 5분 내 응답드립니다.">
+<meta name="keywords" content="법인세무사,청년창업세무사,병의원세무사,개인사업자세무,이룸세무회계">
+<link rel="canonical" href="https://eroomtax.kr/contact.html">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.44.0/tabler-icons.min.css">
+<link rel="stylesheet" href="styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AccountingService",
+  "name": "이룸세무회계",
+  "alternateName": "Eroom Tax",
+  "url": "https://eroomtax.kr/contact.html",
+  "image": "https://eroomtax.kr/images/profile-kim.jpg",
+  "telephone": "+82-2-3462-3474",
+  "email": "taxkimyt@gmail.com",
+  "priceRange": "첫 상담 무료",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "도곡로 129, 401호 (남강빌딩)",
+    "addressLocality": "강남구",
+    "addressRegion": "서울특별시",
+    "addressCountry": "KR"
+  },
+  "founder": {
+    "@type": "Person",
+    "name": "김용태",
+    "jobTitle": "세무사"
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "서울특별시 강남구"
+  },
+  "sameAs": []
+}
+</script>
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+<link rel="apple-touch-icon" href="favicon-180.png">
+<!-- Google Analytics 4: 아래 G-0J1D7C7WG3를 실제 발급받은 측정 ID로 교체하세요 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0J1D7C7WG3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-0J1D7C7WG3');
+</script>
+<!-- 네이버 서치어드바이저 사이트 소유확인: 발급받은 코드로 content 값을 교체하세요 -->
+<meta name="naver-site-verification" content="2f60ec0e83733a129794c67e9b5554e11ee3fd20">
+</head>
+<body data-page="contact">
+<!-- NAV -->
+<nav id="main-nav">
+  <div class="logo" onclick="goPage('home')"><span>이룸</span>세무회계</div>
+  <div class="nav-links">
+    <a class="nl active" id="nav-home" onclick="goPage('home')">홈</a>
+    <div class="nav-dropdown nl" id="nav-services">
+      <a onclick="toggleDropdown(event)">세무서비스</a>
+      <div class="dropdown-menu">
+        <a onclick="goSvc('svc-jang')"><i class="ti ti-book" style="color:#1DB8A0;"></i>세무 기장</a>
+        <a onclick="goSvc('svc-tax')"><i class="ti ti-home" style="color:#B8900A;"></i>재산세제 신고</a>
+        <a onclick="goSvc('svc-con')"><i class="ti ti-chart-dots" style="color:#8B6BB1;"></i>컨설팅</a>
+      </div>
+    </div>
+    <a class="nl" id="nav-about" onclick="goPage('about')">회사소개</a>
+    <a class="nl" id="nav-contact" onclick="goPage('contact')">상담 신청</a>
+  </div>
+  <div class="nav-right">
+    <button class="nav-cta" onclick="window.open('http://pf.kakao.com/_GsQcj/chat','_blank')">무료 상담</button>
+    <button id="hamburger" onclick="toggleMenu()" aria-label="메뉴">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div id="mobile-menu">
+  <a onclick="goPage('home');toggleMenu()">홈</a>
+  <a onclick="toggleMobileSvc()" style="display:flex;align-items:center;justify-content:space-between;">
+    세무서비스 <span id="mobile-svc-arrow" style="font-size:18px;font-weight:700;transition:transform .2s;line-height:1;">▾</span>
+  </a>
+  <div id="mobile-svc-sub" style="display:none;background:var(--gray);border-radius:8px;margin:0 0 4px;">
+    <a onclick="goPage('svc-jang');toggleMenu()" style="padding-left:24px;border-bottom:1px solid var(--border);">세무 기장</a>
+    <a onclick="goPage('svc-tax');toggleMenu()" style="padding-left:24px;border-bottom:1px solid var(--border);">재산세제 신고</a>
+    <a onclick="goPage('svc-con');toggleMenu()" style="padding-left:24px;border-bottom:none;">컨설팅</a>
+  </div>
+  <a onclick="goPage('about');toggleMenu()">회사소개</a>
+  <a onclick="goPage('contact');toggleMenu()">상담 신청</a>
+</div>
+<div class="page active" id="page-contact">
+<div class="grad-bar"></div>
+<div class="section" style="padding-top:52px;">
+  <span class="sec-tag tag-t">무료 상담 · 5분 안에 응답</span>
+  <h1 class="sec-title" style="font-size:28px;">상담 신청</h1>
+  <p class="sec-sub">상담 유형을 선택하시면 맞춤 폼이 바로 나타납니다.</p>
+
+  <div class="consult-wrap">
+    <div class="consult-card">
+
+      <!-- 헤더 + 탭 -->
+      <div class="consult-header">
+        <div class="consult-header-title" id="c-header-title">
+          대표님 정보와<br>상담 내용을 적어주세요
+        </div>
+        <div class="consult-tabs">
+          <button class="ctab2 active" id="ctab2-jang" onclick="switchConsult('jang')">
+            <div class="ctab2-dot"></div>세무 기장
+          </button>
+          <button class="ctab2" id="ctab2-yang" onclick="switchConsult('yang')">
+            <div class="ctab2-dot"></div>양도·상속·증여
+          </button>
+          <button class="ctab2" id="ctab2-etc" onclick="switchConsult('etc')">
+            <div class="ctab2-dot"></div>기타 문의
+          </button>
+        </div>
+      </div>
+
+      <!-- 폼 바디 -->
+      <div class="consult-body" id="c-form-wrap">
+
+        <!-- 상담 방식 (공통) -->
+        <div class="cfield">
+          <label>상담 방식 <span class="creq">*</span></label>
+          <div class="radio-group2">
+            <label class="radio-item2"><input type="radio" name="c-method" value="kakao"><div class="radio-circle2"></div><span>카카오톡 상담</span></label>
+            <label class="radio-item2"><input type="radio" name="c-method" value="phone"><div class="radio-circle2"></div><span>전화 상담</span></label>
+          </div>
+        </div>
+        <div class="cdivider"></div>
+
+        <!-- 세무 기장 -->
+        <div class="ctab-content active" id="ctab-jang">
+          <div class="cfield">
+            <label>사업자 유형 <span class="creq">*</span></label>
+            <div class="radio-group2">
+              <label class="radio-item2"><input type="radio" name="c-biztype" value="법인 사업자"><div class="radio-circle2"></div><span>법인 사업자</span></label>
+              <label class="radio-item2"><input type="radio" name="c-biztype" value="개인 사업자"><div class="radio-circle2"></div><span>개인 사업자</span></label>
+            </div>
+          </div>
+          <div class="cfield">
+            <label>업종 <span class="creq">*</span></label>
+            <input type="text" id="c-biz-jang" placeholder="예) IT 스타트업, 치과의원, 음식점, 온라인쇼핑몰 등">
+          </div>
+          <div class="cfield">
+            <label>연간 매출 규모</label>
+            <select id="c-rev-jang">
+              <option value="">선택해주세요 (선택)</option>
+              <option>5천만원 미만</option>
+              <option>5천만 ~ 1억</option>
+              <option>1억 ~ 3억</option>
+              <option>3억 ~ 10억</option>
+              <option>10억 이상</option>
+            </select>
+          </div>
+          <div class="cfield">
+            <label>연락처 <span class="creq">*</span></label>
+            <input type="tel" id="c-tel-jang" placeholder="010-0000-0000" maxlength="13" inputmode="numeric" oninput="formatTel(this)">
+          </div>
+          <div class="cfield">
+            <label>성함</label>
+            <input type="text" id="c-name-jang" placeholder="성함을 입력해주세요">
+          </div>
+          <div class="cfield">
+            <label>이메일</label>
+            <input type="email" id="c-email-jang" placeholder="이메일을 입력해 주세요">
+          </div>
+          <div class="cfield">
+            <label>상담 내용</label>
+            <textarea id="c-content-jang" maxlength="500" oninput="cCount(this,'cc-jang')"
+              placeholder="업종과 현재 상황을 간단히 적어주시면&#10;첫 답변부터 딱 맞게 드릴 수 있어요.&#10;&#10;예) 강남 IT 스타트업, 연매출 2억&#10;기장을 아직 안 하고 있는데 어떻게 시작하면 될까요?"></textarea>
+            <div class="cchar"><span id="cc-jang">0</span>자 / 최대 500자</div>
+            <div class="chint">💡 <strong>업종·매출 규모·현재 상황</strong>을 함께 적어주시면 더 빠르고 정확하게 답변드릴 수 있어요.</div>
+          </div>
+        </div>
+
+        <!-- 양도·상속·증여 -->
+        <div class="ctab-content" id="ctab-yang">
+          <div class="cfield">
+            <label>상담 유형 <span class="creq">*</span></label>
+            <select id="c-yangtype">
+              <option value="">선택해주세요</option>
+              <option>양도소득세</option>
+              <option>증여세</option>
+              <option>상속세</option>
+              <option>복합상담 (양도+증여 등)</option>
+            </select>
+          </div>
+          <div class="cfield">
+            <label>연락처 <span class="creq">*</span></label>
+            <input type="tel" id="c-tel-yang" placeholder="010-0000-0000" maxlength="13" inputmode="numeric" oninput="formatTel(this)">
+          </div>
+          <div class="cfield">
+            <label>성함</label>
+            <input type="text" id="c-name-yang" placeholder="성함을 입력해주세요">
+          </div>
+          <div class="cfield">
+            <label>상담 내용</label>
+            <textarea id="c-content-yang" maxlength="500" oninput="cCount(this,'cc-yang')"
+              placeholder="현재 보유 자산(부동산·주식 등)과 고민 중인 거래,&#10;예정된 신고·납부 일정을 간단히 적어주세요.&#10;&#10;예) 강남 아파트 10년 보유, 매도 예정&#10;1세대 1주택 비과세 요건이 되는지 확인하고 싶어요."></textarea>
+            <div class="cchar"><span id="cc-yang">0</span>자 / 최대 500자</div>
+            <div class="chint">💡 <strong>자산 종류·보유 기간·대략적 금액</strong>을 함께 적어주시면 절세 시뮬레이션을 바로 잡아드릴 수 있어요.</div>
+          </div>
+        </div>
+
+        <!-- 기타 문의 -->
+        <div class="ctab-content" id="ctab-etc">
+          <div class="cfield">
+            <label>연락처 <span class="creq">*</span></label>
+            <input type="tel" id="c-tel-etc" placeholder="010-0000-0000" maxlength="13" inputmode="numeric" oninput="formatTel(this)">
+          </div>
+          <div class="cfield">
+            <label>성함</label>
+            <input type="text" id="c-name-etc" placeholder="성함을 입력해주세요">
+          </div>
+          <div class="cfield">
+            <label>문의 내용 <span class="creq">*</span></label>
+            <textarea id="c-content-etc" maxlength="500" oninput="cCount(this,'cc-etc')"
+              placeholder="세무조사·경정청구·조세불복·법인 설립 등&#10;어떤 내용이든 편하게 적어주세요.&#10;&#10;예) 세무조사 통보를 받았는데&#10;어떻게 준비해야 할지 막막합니다."></textarea>
+            <div class="cchar"><span id="cc-etc">0</span>자 / 최대 500자</div>
+          </div>
+        </div>
+
+        <div class="cfield" style="margin-top:4px;">
+          <label style="display:flex;align-items:flex-start;gap:8px;font-weight:400;font-size:13px;color:var(--text2);cursor:pointer;">
+            <input type="checkbox" id="c-agree" style="margin-top:2px;width:16px;height:16px;flex-shrink:0;">
+            <span>[필수] 개인정보 수집·이용에 동의합니다. (상담 목적, 상담 완료 후 6개월 보관 후 파기) <a href="privacy-policy.html" target="_blank" style="color:var(--teal);text-decoration:underline;">자세히 보기</a></span>
+          </label>
+        </div>
+        <button class="csubmit" onclick="submitConsult()">상담 신청하기</button>
+        <p class="cnote">입력하신 정보는 상담 목적 외에 사용되지 않습니다.</p>
+      </div>
+
+      <!-- 성공 메시지 -->
+      <div class="csuccess" id="c-success">
+        <div style="width:56px;height:56px;background:var(--teal-bg);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-size:24px;color:var(--teal-text);">✓</div>
+        <h3>상담 신청이 완료됐습니다!</h3>
+        <p>입력하신 연락처로 1영업일 이내 회신드리겠습니다.<br>더 빠른 응대는 카카오톡으로 연락해 주세요.</p>
+      </div>
+    </div>
+
+    <!-- 사무실 정보 -->
+    <div class="info-grid" style="margin-top:24px;">
+      <div class="info-card"><div class="info-label">주소</div><div class="info-value">서울 강남구 도곡로 129, 401호<br>(역삼동 839-12, 남강빌딩)<br><span style="font-size:12px;color:var(--teal);">🚇 강남역 4번 출구 도보 5분</span><br><button onclick="window.open('https://map.naver.com/v5/search/%EC%84%9C%EC%9A%B8%20%EA%B0%95%EB%82%A8%EA%B5%AC%20%EB%8F%84%EA%B3%A1%EB%A1%9C%20129','_blank')" style="margin-top:10px;background:#03C75A;color:#fff;border:none;padding:7px 14px;border-radius:8px;font-size:12px;font-weight:600;cursor:pointer;display:flex;align-items:center;gap:5px;"><i class="ti ti-map-pin"></i> 네이버 지도로 보기</button>
+      <div style="margin-top:12px;border-radius:10px;overflow:hidden;border:1px solid var(--border);">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3165.7408!2d127.03291!3d37.48443!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca15bda4f3b5b%3A0xf06d5b18b0f6c25a!2z7ISc7Jq47Yq567OE7IucIOqwleuCqOq1rCDrjIDqtZTroZwgMTI5!5e0!3m2!1sko!2skr!4v1688000000000!5m2!1sko!2skr"
+          width="100%" height="220" style="border:0;display:block;" allowfullscreen="" loading="lazy" title="이룸세무회계 위치">
+        </iframe>
+      </div></div></div>
+      <div class="info-card"><div class="info-label">전화 · 팩스</div><div class="info-value">T 02-3462-3474<br>M 010-7770-3474<br>F 0507-0335-3981</div></div>
+      <div class="info-card"><div class="info-label">이메일</div><div class="info-value">taxkimyt@gmail.com</div></div>
+      <div class="info-card"><div class="info-label">운영시간</div><div class="info-value">평일 09:00 ~ 18:00<br>토·일·공휴일 휴무</div></div>
+    </div>
+    <!-- 카카오톡 바로가기 -->
+    <div style="margin-top:16px;background:var(--gold-bg);border-radius:12px;padding:16px 20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;">
+      <div>
+        <div style="font-size:14px;font-weight:700;margin-bottom:3px;">더 빠른 응대가 필요하신가요?</div>
+        <div style="font-size:13px;color:var(--text2);">카카오톡 채널로 바로 문의하시면 5분 내 응답드립니다.</div>
+      </div>
+      <button class="btn-gold" onclick="window.open('http://pf.kakao.com/_GsQcj/chat','_blank')" style="white-space:nowrap;">💬 카카오톡 상담</button>
+    </div>
+  </div>
+</div>
+<footer>
+  <div><div class="ft-logo"><span>이룸</span>세무회계</div><div class="ft-slogan">세금에 대한 모든 것, 이룸세무회계</div><div class="ft-info">서울 강남구 도곡로 129, 401호<br>T 02-3462-3474 · taxkimyt@gmail.com</div><div class="ft-reg">사업자등록번호: 116-08-17476 · <a href="privacy-policy.html">개인정보처리방침</a></div></div>
+  <div class="ft-links"><a onclick="goPage('home')">홈</a><a onclick="goPage('services')">서비스</a><a onclick="goPage('about')">회사소개</a><a onclick="goPage('contact')">상담 신청</a></div>
+</footer>
+<script src="script.js"></script>
+<a href="http://pf.kakao.com/_GsQcj/chat" target="_blank" class="floating-kakao" aria-label="카카오톡 상담하기">
+  <i class="ti ti-brand-kakao-talk"></i>
+  <span class="floating-kakao-label">카톡 상담</span>
+</a>
+</body>
+</html>
