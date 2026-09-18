@@ -15,6 +15,7 @@ const CATEGORY_MAP = {
   '세무회계': 'story',
   '스타트업 청년창업': 'startup',
   '인사·노무': 'hr',
+  '인사 노무이야기': 'hr',
   '정책자금 등': 'policy'
 };
 
@@ -46,11 +47,15 @@ const ICON_MAP = {
 
 function decodeEntities(str) {
   return str
+    .replace(/&amp;/g, '&')
     .replace(/&lt;/g, '<')
     .replace(/&gt;/g, '>')
     .replace(/&quot;/g, '"')
     .replace(/&#39;/g, "'")
-    .replace(/&amp;/g, '&');
+    .replace(/&#x27;/gi, "'")
+    .replace(/&mdash;/g, '—')
+    .replace(/&ndash;/g, '–')
+    .replace(/&nbsp;/g, ' ');
 }
 
 function stripHtml(html) {
