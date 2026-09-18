@@ -1,7 +1,7 @@
 // 일회성 보충 함수: 네이버 RSS 창(최근 ~50개) 밖으로 이미 밀려난 과거 글들을
 // 누적 저장소에 한 번 채워 넣기 위한 함수. ?key=<SEED_KEY> 로만 실행 가능하다.
 // 실행 후에는 이 파일을 삭제해도 된다 (blog-sync가 앞으로의 동기화를 계속 담당).
-const { getStore } = require('@netlify/blobs');
+const { getBlogStore } = require('./_shared/blob-store');
 
 const SEED_KEY = 'eroom-seed-2026-09';
 
@@ -155,7 +155,7 @@ exports.handler = async function (event) {
   }
 
   try {
-    const store = getStore('blog-posts');
+    const store = getBlogStore();
     const existing = (await store.get('all-posts', { type: 'json' })) || [];
 
     const byLink = new Map(existing.map(p => [p.link, p]));
