@@ -7,6 +7,6 @@
 [functions]
   node_bundler = "esbuild"
 
-# 매일 오전 9시 / 오후 4시 / 오후 10시(KST) = UTC 00:00 / 07:00 / 13:00 — Netlify 스케줄 함수는 UTC 기준으로 동작
+# 매일 오전 9시 / 오후 3시 / 자정 0시(KST) = UTC 00:00 / 06:00 / 15:00 — Netlify 스케줄 함수는 UTC 기준으로 동작
 [functions."blog-sync"]
-  schedule = "0 0,7,13 * * *"
+  schedule = "0 0,6,15 * * *"
