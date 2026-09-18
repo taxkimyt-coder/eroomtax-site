@@ -8,7 +8,8 @@
 const PAGE_MAP = {
   home:'index.html', services:'services.html', about:'about.html',
   blog:'blog.html', contact:'contact.html', pricing:'pricing.html',
-  'svc-jang':'svc-jang.html', 'svc-tax':'svc-tax.html', 'svc-con':'svc-con.html'
+  'svc-jang':'svc-jang.html', 'svc-tax':'svc-tax.html', 'svc-con':'svc-con.html',
+  'svc-report':'svc-report.html'
 };
 
 function goPage(id, contactTab){
@@ -35,12 +36,9 @@ function toggleFaq(el){el.classList.toggle('open');}
           activeCard.style.borderColor = '#e8e8e8';
           activeCard.style.boxShadow = 'none';
         }
-        if(type === 'gold') {
-          el.style.borderColor = '#F5C200';
-          el.style.boxShadow = '0 4px 20px rgba(245,194,0,.2)';
-        } else if(type === 'purple') {
-          el.style.borderColor = 'var(--purple)';
-          el.style.boxShadow = '0 4px 20px rgba(139,107,177,.2)';
+        if(type === 'gold' || type === 'purple') {
+          el.style.borderColor = '#7C3AED';
+          el.style.boxShadow = '0 4px 20px rgba(124,58,237,.2)';
         }
         activeCard = el;
       } else {
@@ -60,43 +58,19 @@ function toggleFaq(el){el.classList.toggle('open');}
   setTimeout(initHighlight, 300);
 })();
 
-function toggleMobileSvc(){
-  const sub = document.getElementById('mobile-svc-sub');
-  const arrow = document.getElementById('mobile-svc-arrow');
-  if(!sub) return;
-  const isOpen = sub.style.display === 'block';
-  sub.style.display = isOpen ? 'none' : 'block';
-  if(arrow) arrow.style.transform = isOpen ? '' : 'rotate(180deg)';
-}
 function openRtab(name, btn){
-  document.querySelectorAll('.rtab').forEach(t=>t.classList.remove('active'));
+  document.querySelectorAll('.rtab, .report-chip').forEach(t=>t.classList.remove('active'));
   document.querySelectorAll('.report-slide').forEach(s=>s.classList.remove('active'));
   btn.classList.add('active');
   const slide = document.getElementById('rslide-'+name);
   if(slide) slide.classList.add('active');
-}
-
-function toggleDropdown(e){
-  e.stopPropagation();
-  const dd = document.getElementById('nav-services');
-  dd.classList.toggle('open');
-}
-document.addEventListener('click', function(e){
-  const dd = document.getElementById('nav-services');
-  if(dd && !dd.contains(e.target)){
-    dd.classList.remove('open');
-  }
-});
-function goSvc(id){
-  document.getElementById('nav-services').classList.remove('open');
-  goPage(id);
 }
 function openStab(name){
   ['양도','상속','증여'].forEach(t=>{
     const btn=document.getElementById('stab-'+t);
     const con=document.getElementById('sc-'+t);
     const active=t===name;
-    if(btn){btn.style.borderColor=active?'#F5C200':'var(--border)';btn.style.background=active?'#FFF8E0':'#fff';btn.style.color=active?'#B8900A':'var(--text2)';}
+    if(btn){btn.style.borderColor=active?'#E8B923':'var(--border)';btn.style.background=active?'#F3F1EC':'#fff';btn.style.color=active?'#5C5346':'var(--text2)';}
     if(con) con.style.display=active?'block':'none';
   });
 }
@@ -233,11 +207,11 @@ function renderFailBox(container, retryFn){
   const box = document.createElement('div');
   box.id = container === 'consult' ? 'c-fail-box' : 'f-fail-box';
   box.innerHTML = `
-    <div style="margin-top:16px;text-align:center;padding:20px;background:#FFF0F0;border-radius:12px;border:1px solid #f5c6c6;">
-      <div style="font-size:14px;font-weight:700;color:#c41a1a;margin-bottom:6px;">전송이 확인되지 않았습니다</div>
+    <div style="margin-top:16px;text-align:center;padding:20px;background:#FBEFEF;border-radius:12px;border:1px solid #f5c6c6;">
+      <div style="font-size:14px;font-weight:700;color:#B23A3A;margin-bottom:6px;">전송이 확인되지 않았습니다</div>
       <p style="font-size:13px;color:#666;line-height:1.7;margin-bottom:14px;">인터넷 연결이 불안정하거나 서버 응답이 없었어요.<br>아래 버튼으로 다시 시도하시거나, 카카오톡으로 바로 문의해 주세요.</p>
       <div style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap;">
-        <button onclick="window.open('http://pf.kakao.com/_GsQcj/chat','_blank')" style="background:#F5C200;color:#1a1a2e;border:none;padding:10px 18px;border-radius:8px;font-size:13px;font-weight:700;cursor:pointer;">💬 카카오톡으로 문의</button>
+        <button onclick="window.open('http://pf.kakao.com/_GsQcj/chat','_blank')" style="background:#E8B923;color:#14171c;border:none;padding:10px 18px;border-radius:8px;font-size:13px;font-weight:700;cursor:pointer;"><iconify-icon icon="solar:chat-round-dots-bold"></iconify-icon> 카카오톡으로 문의</button>
         <button id="${container}-retry-btn" style="background:none;border:1.5px solid #e8e8e8;padding:10px 18px;border-radius:8px;font-size:13px;cursor:pointer;color:#666;">다시 시도</button>
       </div>
     </div>`;
@@ -301,7 +275,7 @@ async function submitConsult() {
     successEl.id = 'c-success-box';
     successEl.innerHTML = `
       <div style="text-align:center;padding:32px 20px;">
-        <div style="width:56px;height:56px;background:#E0F7F4;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-size:24px;color:#0D8A76;">✓</div>
+        <div style="width:56px;height:56px;background:#EDE9FE;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-size:24px;color:#6D28D9;"><iconify-icon icon="solar:check-circle-bold"></iconify-icon></div>
         <h3 style="font-size:18px;font-weight:700;margin-bottom:10px;">상담 신청이 완료됐습니다!</h3>
         <p style="font-size:14px;color:#666;line-height:1.75;margin-bottom:20px;">입력하신 연락처로 1영업일 이내 회신드리겠습니다.<br>더 빠른 응대는 카카오톡으로 연락해 주세요.</p>
         <button onclick="resetConsult('${type}')" style="background:none;border:1.5px solid #e8e8e8;padding:10px 20px;border-radius:9px;font-size:13px;cursor:pointer;color:#666;">다른 상담 신청하기</button>
@@ -342,41 +316,43 @@ function toggleGuide(el){el.classList.toggle('open');}
 function blogFilter(cat,btn){
   document.querySelectorAll('.blog-ftab').forEach(t=>t.classList.remove('active'));
   btn.classList.add('active');
-  document.querySelectorAll('.blog-card').forEach(c=>{
-    c.style.display=(cat==='all'||c.dataset.cat===cat)?'flex':'none';
+  document.querySelectorAll('.blog-outer').forEach(c=>{
+    c.style.display=(cat==='all'||c.dataset.cat===cat)?'block':'none';
   });
 }
-const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxBeeIfIBc4Sxe2ylazTXkRo-RHRJ2Yd1qUEDYSgm5DIG8nrRM3wzEt2FJiKckQaCar8Q/exec';
 
-async function submitForm(){
-  const n  = document.getElementById('f-name').value.trim();
-  const t  = document.getElementById('f-tel').value.trim();
-  const tp = document.getElementById('f-type').value;
-  const em = document.getElementById('f-email').value.trim();
-  const rv = document.querySelector('#page-contact select:nth-of-type(2)')?.value || '';
-  const ct = document.getElementById('f-content').value.trim();
-
-  if(!n||!t||!tp){alert('성함, 연락처, 사업 유형은 필수입니다.');return;}
-
-  const btn = document.querySelector('.submit-btn');
-  btn.textContent = '전송 중...';
-  btn.disabled = true;
-
-  const result = await postToSheet({ name: n, tel: t, email: em, bizType: tp, revenue: rv, content: ct });
-
-  document.getElementById('f-fail-box')?.remove();
-
-  if(result.ok){
-    document.getElementById('form-wrap').style.display='none';
-    document.getElementById('success-msg').style.display='block';
-  } else {
-    const box = renderFailBox('f');
-    document.getElementById('form-wrap').appendChild(box);
-    document.getElementById('f-retry-btn')?.addEventListener('click', submitForm);
-    btn.textContent = '상담 신청하기';
-    btn.disabled = false;
+/* ── 블로그: 네이버 블로그 RSS를 Netlify 함수(blog-feed)로 읽어와 카드 렌더링 ── */
+function escapeHtml(str){
+  return String(str).replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+}
+async function loadBlogFeed(){
+  const grid = document.getElementById('blog-cards');
+  if(!grid) return;
+  try{
+    const res = await fetch('/.netlify/functions/blog-feed');
+    if(!res.ok) throw new Error('blog-feed request failed');
+    const data = await res.json();
+    const posts = data.posts || [];
+    if(!posts.length) throw new Error('no posts');
+    grid.innerHTML = posts.map((p, i) => `
+      <div class="blog-outer" data-cat="${p.category}" onclick="window.open('${p.link}','_blank')"><div class="blog-card">
+        <div class="blog-thumb"><iconify-icon icon="${p.icon}"></iconify-icon></div>
+        <div class="blog-body">
+          <div class="blog-tags"><span class="blog-tag">${escapeHtml(p.categoryLabel)}</span>${i===0?'<span class="blog-tag new">NEW</span>':''}</div>
+          <div class="blog-title">${escapeHtml(p.title)}</div>
+          <div class="blog-desc">${escapeHtml(p.desc)}</div>
+        </div>
+        <div class="blog-footer"><span class="blog-date">${p.date}</span><span class="blog-link">읽어보기 →</span></div>
+      </div></div>
+    `).join('');
+  }catch(err){
+    grid.innerHTML = `<div style="grid-column:1/-1;text-align:center;padding:40px 20px;color:var(--text2);font-size:13px;">
+      최신 글을 불러오지 못했습니다.<br>
+      <button class="btn-outline-sm" style="margin-top:12px;" onclick="window.open('https://blog.naver.com/eroom-tax','_blank')">네이버 블로그에서 보기 →</button>
+    </div>`;
   }
 }
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxBeeIfIBc4Sxe2ylazTXkRo-RHRJ2Yd1qUEDYSgm5DIG8nrRM3wzEt2FJiKckQaCar8Q/exec';
 
 function checkFade(){
   document.querySelectorAll('.fade-up').forEach(el=>{
@@ -387,17 +363,25 @@ window.addEventListener('scroll',()=>{
   document.getElementById('main-nav')?.classList.toggle('scrolled',window.scrollY>20);
   checkFade();
 });
+/* 스크롤로 다시 들어올 때마다 재생: dataset.done 가드 없이 매 진입마다 재시작하되,
+   빠르게 들락날락해도 이전 애니메이션 프레임이 새 애니메이션을 덮어쓰지 않도록 토큰으로 무효화 */
 const co=new IntersectionObserver(entries=>{
   entries.forEach(e=>{
-    if(e.isIntersecting&&!e.target.dataset.done){
-      e.target.dataset.done='1';
-      const target=parseInt(e.target.dataset.count);
+    if(e.isIntersecting){
+      const token=Symbol();
+      e.target._countToken=token;
+      const raw=e.target.dataset.count;
+      const target=parseFloat(raw);
+      const decimals=(raw.split('.')[1]||'').length;
       const suffix=e.target.dataset.suffix||'';
       const dur=1200;const start=performance.now();
       function up(now){
+        if(e.target._countToken!==token)return;
         const p=Math.min((now-start)/dur,1);
         const ease=1-Math.pow(1-p,3);
-        e.target.textContent=Math.round(ease*target)+suffix;
+        const val=ease*target;
+        const text=decimals?val.toFixed(decimals):Math.round(val).toLocaleString();
+        e.target.textContent=text+suffix;
         if(p<1)requestAnimationFrame(up);
       }
       requestAnimationFrame(up);
@@ -405,6 +389,125 @@ const co=new IntersectionObserver(entries=>{
   });
 },{threshold:0.5});
 document.querySelectorAll('[data-count]').forEach(el=>co.observe(el));
+
+/* ── 서비스 절차(.process) 원문자 사이 화살표를 실측 중간지점에 배치 ──
+   텍스트 길이에 따라 각 단계 높이가 달라 CSS만으로는 두 원 사이 정중앙을
+   맞출 수 없어서, 실제 렌더링된 원문자 위치를 읽어 절대배치한다. */
+function layoutProcessChevrons(){
+  document.querySelectorAll('.process').forEach(proc => {
+    proc.querySelectorAll('.ps-chevron').forEach(c => c.remove());
+    const nums = proc.querySelectorAll('.ps-num');
+    if(nums.length < 2) return;
+    const procRect = proc.getBoundingClientRect();
+    for(let i = 0; i < nums.length - 1; i++){
+      const a = nums[i].getBoundingClientRect();
+      const b = nums[i+1].getBoundingClientRect();
+      const chev = document.createElement('div');
+      chev.className = 'ps-chevron';
+      chev.innerHTML = '&rsaquo;';
+      chev.style.left = ((a.left + a.right) / 2 - procRect.left) + 'px';
+      chev.style.top = ((a.bottom + b.top) / 2 - procRect.top) + 'px';
+      proc.appendChild(chev);
+    }
+  });
+}
+window.addEventListener('load', layoutProcessChevrons);
+window.addEventListener('resize', layoutProcessChevrons);
+
+/* ── 세무서비스 하위 상세페이지 미니탭: 슬라이딩 밑줄 인디케이터 ──
+   호버 시 그 탭 위치로 밑줄이 부드럽게 이동(미리보기), 클릭하면 밑줄이 먼저
+   슬라이드된 뒤 페이지 이동 — 실제 라우팅은 정적 페이지 이동이라 전환 자체를
+   애니메이션할 수는 없지만, 클릭 직후 밑줄이 목적지로 움직이는 걸 보여줘서
+   자연스러운 전환처럼 느껴지게 한다. */
+function initSvcTabs(){
+  const bar = document.querySelector('.svc-tabbar');
+  if(!bar) return;
+  const underline = bar.querySelector('.svc-tab-underline');
+  const items = [...bar.querySelectorAll('.svc-tabitem')];
+  function moveTo(el, instant){
+    if(!el) return;
+    if(instant){
+      underline.style.transition = 'none';
+      underline.style.width = el.offsetWidth + 'px';
+      underline.style.left = el.offsetLeft + 'px';
+      underline.offsetHeight; // 강제 리플로우 후 transition 복구 (다음 이동부터는 애니메이션되도록)
+      underline.style.transition = '';
+    } else {
+      underline.style.width = el.offsetWidth + 'px';
+      underline.style.left = el.offsetLeft + 'px';
+    }
+  }
+  const activeEl = bar.querySelector('.svc-tabitem.active') || items[0];
+  // 밑줄은 기본값(left:0,width:0)에서 시작하므로, 처음 위치를 잡을 때 애니메이션 없이
+  // 즉시 이동시켜야 "오른쪽 끝에서 슬라이드해오는" 것처럼 보이는 로드 시 오작동을 막는다.
+  const syncActive = (instant)=>moveTo(bar.querySelector('.svc-tabitem.active')||activeEl, instant);
+  requestAnimationFrame(()=>syncActive(true));
+  // Pretendard 웹폰트가 늦게 로드되면 그 전 폴백 폰트 기준으로 잰 위치/너비가 틀어지므로,
+  // 폰트 로드 완료 후(및 안전망으로 load 이벤트 후) 다시 계산한다(이때도 즉시 이동).
+  if(document.fonts && document.fonts.ready) document.fonts.ready.then(()=>syncActive(true));
+  window.addEventListener('load', ()=>syncActive(true));
+  // 페이지 이동(클릭) 직후에는 마우스 포인터가 화면상 같은 위치에 그대로 남아있는데,
+  // 브라우저가 그 위치에 놓인 새 페이지의 탭 위로 "가짜" mouseenter를 즉시 발생시켜
+  // 밑줄이 활성 탭→그 탭으로 튀었다가 되돌아오는 오작동을 만든다. 실제 마우스가 한 번
+  // 움직인 뒤에만 호버 반응을 켜서 이 가짜 이벤트를 무시한다.
+  let realMouseMoved = false;
+  window.addEventListener('mousemove', ()=>{ realMouseMoved = true; }, {once:true});
+  items.forEach(el=>{
+    el.addEventListener('mouseenter', ()=>{ if(realMouseMoved) moveTo(el); });
+  });
+  bar.addEventListener('mouseleave', ()=>{ if(realMouseMoved) syncActive(false); });
+  items.forEach(el=>{
+    el.addEventListener('click', function(e){
+      e.preventDefault();
+      moveTo(el);
+      const target = el.dataset.page;
+      setTimeout(()=>goPage(target), 220);
+    });
+  });
+  window.addEventListener('resize', ()=>syncActive(true));
+}
+
+/* ── 상단 메인 네비게이션: svc-tabbar와 동일한 슬라이딩 밑줄 인디케이터 ── */
+function navClick(el, target){
+  const bar = document.querySelector('.nav-links');
+  const underline = bar && bar.querySelector('.nav-underline');
+  if(!underline){ goPage(target); return; }
+  underline.style.width = el.offsetWidth + 'px';
+  underline.style.left = el.offsetLeft + 'px';
+  setTimeout(()=>goPage(target), 220);
+}
+function initNavUnderline(){
+  const bar = document.querySelector('.nav-links');
+  if(!bar) return;
+  const underline = bar.querySelector('.nav-underline');
+  if(!underline) return;
+  const items = [...bar.querySelectorAll('.nl')];
+  function moveTo(el, instant){
+    if(!el) return;
+    if(instant){
+      underline.style.transition = 'none';
+      underline.style.width = el.offsetWidth + 'px';
+      underline.style.left = el.offsetLeft + 'px';
+      underline.offsetHeight;
+      underline.style.transition = '';
+    } else {
+      underline.style.width = el.offsetWidth + 'px';
+      underline.style.left = el.offsetLeft + 'px';
+    }
+  }
+  const fallback = items[0];
+  const syncActive = (instant)=>moveTo(bar.querySelector('.nl.active')||fallback, instant);
+  requestAnimationFrame(()=>syncActive(true));
+  if(document.fonts && document.fonts.ready) document.fonts.ready.then(()=>syncActive(true));
+  window.addEventListener('load', ()=>syncActive(true));
+  let realMouseMoved = false;
+  window.addEventListener('mousemove', ()=>{ realMouseMoved = true; }, {once:true});
+  items.forEach(el=>{
+    el.addEventListener('mouseenter', ()=>{ if(realMouseMoved) moveTo(el); });
+  });
+  bar.addEventListener('mouseleave', ()=>{ if(realMouseMoved) syncActive(false); });
+  window.addEventListener('resize', ()=>syncActive(true));
+}
 
 /* ── 페이지 로드 시: 현재 페이지 네비 활성화 + 상담 탭 쿼리스트링 처리 ── */
 document.addEventListener('DOMContentLoaded', function(){
@@ -414,10 +517,16 @@ document.addEventListener('DOMContentLoaded', function(){
     const navId = page.startsWith('svc-') ? 'nav-services' : 'nav-'+page;
     document.getElementById(navId)?.classList.add('active');
   }
+  document.querySelectorAll('.svc-tabitem[data-page]').forEach(el=>{
+    el.classList.toggle('active', el.dataset.page === page);
+  });
+  initSvcTabs();
+  initNavUnderline();
   if(page === 'contact'){
     const params = new URLSearchParams(location.search);
     const tab = params.get('tab');
     if(tab) switchConsult(tab);
   }
+  if(page === 'blog') loadBlogFeed();
   setTimeout(checkFade,300);
 });
