@@ -154,6 +154,13 @@ exports.handler = async function (event) {
     return { statusCode: 403, body: 'forbidden' };
   }
 
+  const debugInfo = {
+    hasSiteId: !!process.env.BLOBS_SITE_ID,
+    siteIdLen: (process.env.BLOBS_SITE_ID || '').length,
+    hasToken: !!process.env.BLOBS_TOKEN,
+    tokenLen: (process.env.BLOBS_TOKEN || '').length
+  };
+
   try {
     const store = getBlogStore();
     const existing = (await store.get('all-posts', { type: 'json' })) || [];
@@ -169,6 +176,6 @@ exports.handler = async function (event) {
       body: JSON.stringify({ total: merged.length, added: OLD_POSTS.length })
     };
   } catch (err) {
-    return { statusCode: 500, body: JSON.stringify({ error: String(err) }) };
+    return { statusCode: 500, body: JSON.stringify({ error: String(err), debugInfo }) };
   }
 };
