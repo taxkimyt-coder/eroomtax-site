@@ -1,0 +1,7 @@
+{
+  "name": "eroomtax-functions",
+  "private": true,
+  "dependencies": {
+    "@netlify/blobs": "^11.1.0"
+  }
+}
