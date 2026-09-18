@@ -348,8 +348,8 @@ nav.scrolled{box-shadow:0 2px 20px rgba(20,23,28,.06);}
 .btn-outline-sm{background:#fff;border:1px solid var(--border);color:var(--text);font-size:13.5px;font-weight:700;padding:9px 16px;border-radius:8px;cursor:pointer;transition:background .3s;white-space:nowrap;}
 .btn-outline-sm:hover{background:#f2f2f2;}
 
-.filter-row{display:flex;gap:22px;flex-wrap:wrap;border-bottom:1px solid var(--border);margin-bottom:28px;}
-.blog-ftab{font-size:14px;font-weight:600;color:var(--text2);background:none;border:none;padding:0 0 12px;border-bottom:2px solid transparent;cursor:pointer;font-family:inherit;transition:opacity .2s;}
+.filter-row{display:flex;gap:22px;flex-wrap:wrap;margin-bottom:28px;}
+.blog-ftab{font-size:14px;font-weight:600;color:var(--text2);background:none;border:none;padding:0 0 2px;border-bottom:2px solid transparent;cursor:pointer;font-family:inherit;transition:opacity .2s;}
 .blog-ftab:hover{opacity:.7;}
 .blog-ftab.active{font-weight:700;border-bottom-color:currentColor;}
 .bft-all.active{color:var(--teal);}
